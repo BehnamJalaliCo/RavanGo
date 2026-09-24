@@ -23,4 +23,19 @@ final class PreferencesStoreTests: XCTestCase {
         XCTAssertEqual(reloaded.values.defaultFontSize, 52)
         XCTAssertEqual(reloaded.values.language, .persian)
     }
+
+    func testFreshPreferencesDefaultToEnglish() {
+        XCTAssertEqual(UserPreferences().language, .english)
+    }
+
+    func testPreferencesDecodeMissingFieldsWithDefaults() throws {
+        let data = Data(#"{"defaultSpeed":1.25,"language":"fa"}"#.utf8)
+        let values = try JSONDecoder().decode(UserPreferences.self, from: data)
+
+        XCTAssertEqual(values.defaultSpeed, 1.25)
+        XCTAssertEqual(values.language, .persian)
+        XCTAssertEqual(values.defaultFontSize, 44)
+        XCTAssertEqual(values.countdownDuration, .three)
+        XCTAssertEqual(values.textAlignment, .leading)
+    }
 }
