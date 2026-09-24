@@ -15,6 +15,15 @@ enum ImportExportError: LocalizedError, Equatable {
         case .storageFailure: String(localized: "RavanGo could not save the imported scripts.")
         }
     }
+
+    func localizedMessage(for language: AppLanguage) -> String {
+        switch self {
+        case .invalidFile: String(localized: "This file is not a valid RavanGo backup.", locale: language.locale)
+        case .emptyFile: String(localized: "The backup does not contain any scripts.", locale: language.locale)
+        case .cannotWriteFile: String(localized: "RavanGo could not create the export file.", locale: language.locale)
+        case .storageFailure: String(localized: "RavanGo could not save the imported scripts.", locale: language.locale)
+        }
+    }
 }
 
 enum ImportExportService {
@@ -56,14 +65,16 @@ enum ImportExportService {
     static func importScripts(
         from data: Data,
         into context: ModelContext,
-        existingScripts: [Script]
+        existingScripts: [Script],
+        language: AppLanguage = .english
     ) throws -> Int {
         let transfers = try decode(data)
         var existingTitles = Set(existingScripts.map { $0.title.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() })
+        var insertedScripts: [Script] = []
 
         for transfer in transfers {
             let baseTitle = transfer.title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                ? "Imported Script"
+                ? String(localized: "Imported Script", locale: language.locale)
                 : transfer.title.trimmingCharacters(in: .whitespacesAndNewlines)
             let title = uniqueImportedTitle(baseTitle, existingTitles: &existingTitles)
             let script = Script(
@@ -74,11 +85,15 @@ enum ImportExportService {
                 direction: ScriptDirection(rawValue: transfer.directionRawValue) ?? .automatic
             )
             context.insert(script)
+            insertedScripts.append(script)
         }
 
         do {
             try ScriptStorageService.save(context)
         } catch {
+            for script in insertedScripts {
+                context.delete(script)
+            }
             throw ImportExportError.storageFailure
         }
         return transfers.count
