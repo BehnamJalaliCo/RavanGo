@@ -54,7 +54,8 @@ enum AppFont {
         didAttemptRegistration = true
 
         for resource in bundledFiles {
-            guard let url = Bundle.main.url(forResource: resource, withExtension: "ttf") else {
+            guard let url = Bundle.main.url(forResource: resource, withExtension: "ttf", subdirectory: "Fonts")
+                ?? Bundle.main.url(forResource: resource, withExtension: "ttf") else {
                 continue
             }
 
