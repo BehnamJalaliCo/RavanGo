@@ -1,0 +1,77 @@
+name: RavanGo
+
+options:
+  minimumXcodeGenVersion: 2.44.1
+  deploymentTarget:
+    iOS: "18.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    CLANG_ENABLE_MODULES: YES
+    CLANG_ENABLE_OBJC_ARC: YES
+
+targets:
+  RavanGo:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: RavanGo/App
+      - path: RavanGo/Models
+      - path: RavanGo/Views
+      - path: RavanGo/ViewModels
+      - path: RavanGo/Services
+      - path: RavanGo/Components
+      - path: RavanGo/Utilities
+    resources:
+      - path: RavanGo/Assets.xcassets
+      - path: RavanGo/Localizable.xcstrings
+      - path: RavanGo/PrivacyInfo.xcprivacy
+      - path: RavanGo/Resources/Fonts
+        type: folder
+    info:
+      path: RavanGo/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.behnamjalali.ravango
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        CURRENT_PROJECT_VERSION: "1"
+        MARKETING_VERSION: "1.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SWIFT_EMIT_LOC_STRINGS: YES
+
+  RavanGoTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources:
+      - path: RavanGoTests
+    dependencies:
+      - target: RavanGo
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.behnamjalali.ravango.tests
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo"
+
+schemes:
+  RavanGo:
+    build:
+      targets:
+        RavanGo: all
+        RavanGoTests: [test]
+    test:
+      targets:
+        - name: RavanGoTests
+    run:
+      config: Debug
+    archive:
+      config: Release
