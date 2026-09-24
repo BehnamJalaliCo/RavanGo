@@ -27,3 +27,35 @@ enum ScriptMetrics {
         return "\(formattedMinutes)m \(formattedSeconds)s"
     }
 }
+
+enum AppFormatting {
+    static func integer(_ value: Double, locale: Locale) -> String {
+        Int(value.rounded()).formatted(.number.locale(locale))
+    }
+
+    static func decimal(_ value: Double, locale: Locale, fractionDigits: Int = 2) -> String {
+        value.formatted(.number.precision(.fractionLength(0...fractionDigits)).locale(locale))
+    }
+
+    static func speed(_ value: Double, language: AppLanguage) -> String {
+        "\(decimal(value, locale: language.locale))x"
+    }
+
+    static func points(_ value: Double, language: AppLanguage) -> String {
+        let number = integer(value, locale: language.locale)
+        let unit = String(localized: "points_short", locale: language.locale)
+        return "\(number) \(unit)"
+    }
+
+    static func percentage(_ value: Double, language: AppLanguage) -> String {
+        let number = integer(value * 100, locale: language.locale)
+        let unit = String(localized: "percent_sign", locale: language.locale)
+        return "\(number)\(unit)"
+    }
+
+    static func wordsPerMinute(_ value: Double, language: AppLanguage) -> String {
+        let number = integer(value, locale: language.locale)
+        let unit = String(localized: "wpm_short", locale: language.locale)
+        return "\(number) \(unit)"
+    }
+}
