@@ -3,148 +3,597 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1001001 /* RavanGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002001 /* RavanGoApp.swift */; };
-		1001022 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1002024 /* PrivacyInfo.xcprivacy */; };
-		1001023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1002023 /* Assets.xcassets */; };
-		1001026 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1002027 /* Localizable.xcstrings */; };
-		1001033 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 1002034 /* Fonts */; };
-		1001002 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002002 /* EmptyStateView.swift */; };
-		1001003 /* RemoteCommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002003 /* RemoteCommandView.swift */; };
-		1001004 /* SliderSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002004 /* SliderSettingRow.swift */; };
-		1001025 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002026 /* ShareSheet.swift */; };
-		1001005 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002005 /* Script.swift */; };
-		1001006 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002006 /* UserPreferences.swift */; };
-		1001007 /* ImportExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002007 /* ImportExportService.swift */; };
-		1001008 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002008 /* PreferencesStore.swift */; };
-		1001024 /* ScriptStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002025 /* ScriptStorageService.swift */; };
-		1001009 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002009 /* AppConstants.swift */; };
-		1001010 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002010 /* Haptics.swift */; };
-		1001011 /* ScriptMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002011 /* ScriptMetrics.swift */; };
-		1001031 /* SearchNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002032 /* SearchNormalizer.swift */; };
-		1001032 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002033 /* AppFont.swift */; };
-		1001012 /* TeleprompterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002012 /* TeleprompterViewModel.swift */; };
-		1001013 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002013 /* ScriptEditorView.swift */; };
-		1001014 /* ScriptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002014 /* ScriptRowView.swift */; };
-		1001015 /* ScriptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002015 /* ScriptsView.swift */; };
-		1001016 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002016 /* SettingsView.swift */; };
-		1001017 /* TeleprompterControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002017 /* TeleprompterControlsView.swift */; };
-		1001018 /* TeleprompterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002018 /* TeleprompterScrollView.swift */; };
-		1001019 /* TeleprompterSettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002019 /* TeleprompterSettingsSheet.swift */; };
-		1001020 /* TeleprompterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002020 /* TeleprompterTextView.swift */; };
-		1001021 /* TeleprompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002021 /* TeleprompterView.swift */; };
-		2001001 /* ScriptMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002001 /* ScriptMetricsTests.swift */; };
-		2001002 /* ImportExportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002002 /* ImportExportServiceTests.swift */; };
-		2001003 /* PreferencesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002003 /* PreferencesStoreTests.swift */; };
-		2001004 /* DevelopmentScriptFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002004 /* DevelopmentScriptFixture.swift */; };
+		0CC4554BBBEA8AE2D4055F0D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA13E71D573A97F56BFC9C /* SettingsView.swift */; };
+		1AEDCDEFFADEBAD2BDA3FD12 /* SliderSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FB65D3C535C28A6E899D88 /* SliderSettingRow.swift */; };
+		21F1893424F20D7479D34AC5 /* ScriptRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CB046958C6775DE965771C /* ScriptRowView.swift */; };
+		288727078E156822E0FEB53A /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E0492FA6F54F4309004D1A /* Haptics.swift */; };
+		30C6C3B1EEEA07A6E7A3FB96 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096ABD7C45794F8905D2AF3 /* Script.swift */; };
+		38FCC91089AD5067C4DFB31E /* SearchNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85A133AF967E01AFF56F54A /* SearchNormalizer.swift */; };
+		3A0578CE40E5F9B9B3D57227 /* ScriptEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FA4E32036AA3ABB47867C3 /* ScriptEditorView.swift */; };
+		48453020D23369E3D76F802C /* ImportExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A8575D6127D416BD5B9ED1 /* ImportExportService.swift */; };
+		48A3FE2615A150A29C77814C /* ScriptMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5EB87931071DEF6A94F90 /* ScriptMetrics.swift */; };
+		4A1D435CAA65FDA186DFB39D /* TeleprompterSettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BB6E62278E8D7CFD2ED96F /* TeleprompterSettingsSheet.swift */; };
+		4E83E5727AF8DC0E526803AE /* TeleprompterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE3543C72127CA44B56D91 /* TeleprompterTextView.swift */; };
+		5A4C036DBABDB27283609CF7 /* RavanGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166C504EDA4CA4DBDF3B30B /* RavanGoApp.swift */; };
+		5D47194994E128D9E2D8C4BF /* TeleprompterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD13E28A9888A65E2BA191 /* TeleprompterScrollView.swift */; };
+		5EC1CEA158CF34452474E9FF /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65768BCD92F10D30831AD340 /* UserPreferences.swift */; };
+		60BA60CCFBFFD9F53BF894C1 /* DevelopmentScriptFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36DCEA358F5D1FFA6AFE68 /* DevelopmentScriptFixture.swift */; };
+		790C8E2DCDF4906F021717E2 /* TeleprompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E960C218281D7126112AD9C /* TeleprompterView.swift */; };
+		83D6A7E3BE57A53254A7770B /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE654B117E3D3C0A0D692C /* EmptyStateView.swift */; };
+		8C28B7DC3B953F5382C4BD88 /* ImportExportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F1ACFF61F695C03D8A377 /* ImportExportServiceTests.swift */; };
+		8FFDF14D23724B92455DBA1E /* TeleprompterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DD07E787B223CE96FBB85 /* TeleprompterViewModel.swift */; };
+		90BC19CC736B2774A48A3463 /* RemoteCommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73B7BCB02DED676726DB4F4 /* RemoteCommandView.swift */; };
+		90D48AA95C2D3EA1CF81F72C /* PreferencesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56716E187A1D6D5B926C853E /* PreferencesStoreTests.swift */; };
+		91EF9E6B70D669B3928EB01C /* ScriptMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554DB4CB707BBF5EC663610F /* ScriptMetricsTests.swift */; };
+		93E2CF34FF9462CBC78F78CB /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CE4D58A526752B6CB44486 /* AppFont.swift */; };
+		964C5014B3D6D38ED601CE28 /* ScriptsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEDA9129AFECF965D25347E /* ScriptsView.swift */; };
+		A46AFBF917865A1D6D54A706 /* ScriptStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AE2A92147DBAE5FD499F3C /* ScriptStorageService.swift */; };
+		AAEAD79083D67B38CBCCF68F /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E88355E95D1847FA7D992D /* PreferencesStore.swift */; };
+		AB96227BA378350BEA8290E0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CC110D2B92C3E80D17A487 /* AppConstants.swift */; };
+		B0CCA4D4532521FA085218EF /* TeleprompterControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C135AAE7F5F110CB6584D84 /* TeleprompterControlsView.swift */; };
+		BEA8CB255004C84189640191 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8DF963020D88A5AC9BD5F /* ShareSheet.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D8622B6D390C7E2420EB6ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 329723F5BAB0B52ECCB83DDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EBF6730F614D69BC6CFBE80;
+			remoteInfo = RavanGo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1002001 /* RavanGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavanGoApp.swift; sourceTree = "<group>"; };
-		1002002 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
-		1002003 /* RemoteCommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandView.swift; sourceTree = "<group>"; };
-		1002004 /* SliderSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSettingRow.swift; sourceTree = "<group>"; };
-		1002026 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
-		1002005 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
-		1002006 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
-		1002007 /* ImportExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportService.swift; sourceTree = "<group>"; };
-		1002008 /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
-		1002025 /* ScriptStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptStorageService.swift; sourceTree = "<group>"; };
-		1002009 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		1002010 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
-		1002011 /* ScriptMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptMetrics.swift; sourceTree = "<group>"; };
-		1002012 /* TeleprompterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterViewModel.swift; sourceTree = "<group>"; };
-		1002013 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
-		1002014 /* ScriptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptRowView.swift; sourceTree = "<group>"; };
-		1002015 /* ScriptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsView.swift; sourceTree = "<group>"; };
-		1002016 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		1002017 /* TeleprompterControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterControlsView.swift; sourceTree = "<group>"; };
-		1002018 /* TeleprompterScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterScrollView.swift; sourceTree = "<group>"; };
-		1002019 /* TeleprompterSettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterSettingsSheet.swift; sourceTree = "<group>"; };
-		1002020 /* TeleprompterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterTextView.swift; sourceTree = "<group>"; };
-		1002021 /* TeleprompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterView.swift; sourceTree = "<group>"; };
-		1002022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1002023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1002024 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		1002027 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		1002032 /* SearchNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNormalizer.swift; sourceTree = "<group>"; };
-		1002033 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
-		1002034 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources/Fonts; sourceTree = "<group>"; };
-		2002001 /* ScriptMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptMetricsTests.swift; sourceTree = "<group>"; };
-		2002002 /* ImportExportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportServiceTests.swift; sourceTree = "<group>"; };
-		2002003 /* PreferencesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStoreTests.swift; sourceTree = "<group>"; };
-		2002004 /* DevelopmentScriptFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentScriptFixture.swift; sourceTree = "<group>"; };
-		3300001 /* RavanGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RavanGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3300002 /* RavanGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RavanGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01B8DF963020D88A5AC9BD5F /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		08FA4E32036AA3ABB47867C3 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
+		0C135AAE7F5F110CB6584D84 /* TeleprompterControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterControlsView.swift; sourceTree = "<group>"; };
+		0E960C218281D7126112AD9C /* TeleprompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterView.swift; sourceTree = "<group>"; };
+		15AE2A92147DBAE5FD499F3C /* ScriptStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptStorageService.swift; sourceTree = "<group>"; };
+		1EEDA9129AFECF965D25347E /* ScriptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsView.swift; sourceTree = "<group>"; };
+		2166C504EDA4CA4DBDF3B30B /* RavanGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavanGoApp.swift; sourceTree = "<group>"; };
+		36CC110D2B92C3E80D17A487 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		48CB046958C6775DE965771C /* ScriptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptRowView.swift; sourceTree = "<group>"; };
+		54B3C6652EFB841789CD2C94 /* RavanGoTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = RavanGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		554DB4CB707BBF5EC663610F /* ScriptMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptMetricsTests.swift; sourceTree = "<group>"; };
+		56716E187A1D6D5B926C853E /* PreferencesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStoreTests.swift; sourceTree = "<group>"; };
+		59FE654B117E3D3C0A0D692C /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		5AB5EB87931071DEF6A94F90 /* ScriptMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptMetrics.swift; sourceTree = "<group>"; };
+		65768BCD92F10D30831AD340 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		66E88355E95D1847FA7D992D /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+		68FA13E71D573A97F56BFC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6F3DD07E787B223CE96FBB85 /* TeleprompterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterViewModel.swift; sourceTree = "<group>"; };
+		97E0492FA6F54F4309004D1A /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		98FB65D3C535C28A6E899D88 /* SliderSettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSettingRow.swift; sourceTree = "<group>"; };
+		9F6F1ACFF61F695C03D8A377 /* ImportExportServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportServiceTests.swift; sourceTree = "<group>"; };
+		AA36DCEA358F5D1FFA6AFE68 /* DevelopmentScriptFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentScriptFixture.swift; sourceTree = "<group>"; };
+		B096ABD7C45794F8905D2AF3 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
+		B3AE3543C72127CA44B56D91 /* TeleprompterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterTextView.swift; sourceTree = "<group>"; };
+		B85A133AF967E01AFF56F54A /* SearchNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNormalizer.swift; sourceTree = "<group>"; };
+		D0A8575D6127D416BD5B9ED1 /* ImportExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportService.swift; sourceTree = "<group>"; };
+		D0CE4D58A526752B6CB44486 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		D73B7BCB02DED676726DB4F4 /* RemoteCommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandView.swift; sourceTree = "<group>"; };
+		D7BD13E28A9888A65E2BA191 /* TeleprompterScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterScrollView.swift; sourceTree = "<group>"; };
+		DA1F33A55B80A76E236D422B /* RavanGo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RavanGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4BB6E62278E8D7CFD2ED96F /* TeleprompterSettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterSettingsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		4000002 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
-		4000004 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = ( ); runOnlyForDeploymentPostprocessing = 0; };
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		3000000 = {isa = PBXGroup; children = (3100000, 3200000, 2003000); sourceTree = "<group>"; };
-		3100000 /* RavanGo */ = {isa = PBXGroup; children = (3101000, 3102000, 3103000, 3104000, 3105000, 3106000, 3107000, 1002034, 1002022, 1002023, 1002024, 1002027); path = RavanGo; sourceTree = "<group>"; };
-		3101000 /* App */ = {isa = PBXGroup; children = (1002001); path = App; sourceTree = "<group>"; };
-		3102000 /* Models */ = {isa = PBXGroup; children = (1002005, 1002006); path = Models; sourceTree = "<group>"; };
-		3103000 /* Views */ = {isa = PBXGroup; children = (3103100, 3103200, 3103300, 3103400); path = Views; sourceTree = "<group>"; };
-		3103100 /* Scripts */ = {isa = PBXGroup; children = (1002014, 1002015); path = Scripts; sourceTree = "<group>"; };
-		3103200 /* Editor */ = {isa = PBXGroup; children = (1002013); path = Editor; sourceTree = "<group>"; };
-		3103300 /* Teleprompter */ = {isa = PBXGroup; children = (1002017, 1002018, 1002019, 1002020, 1002021); path = Teleprompter; sourceTree = "<group>"; };
-		3103400 /* Settings */ = {isa = PBXGroup; children = (1002016); path = Settings; sourceTree = "<group>"; };
-		3104000 /* ViewModels */ = {isa = PBXGroup; children = (1002012); path = ViewModels; sourceTree = "<group>"; };
-		3105000 /* Services */ = {isa = PBXGroup; children = (1002007, 1002008, 1002025); path = Services; sourceTree = "<group>"; };
-		3106000 /* Components */ = {isa = PBXGroup; children = (1002002, 1002003, 1002004, 1002026); path = Components; sourceTree = "<group>"; };
-		3107000 /* Utilities */ = {isa = PBXGroup; children = (1002009, 1002010, 1002011, 1002032, 1002033); path = Utilities; sourceTree = "<group>"; };
-		3200000 /* Products */ = {isa = PBXGroup; children = (3300001, 3300002); name = Products; sourceTree = "<group>"; };
-		2003000 /* RavanGoTests */ = {isa = PBXGroup; children = (2002001, 2002002, 2002003, 2002004); path = RavanGoTests; sourceTree = "<group>"; };
+		07B2F64ABD94642832C18B19 /* RavanGo */ = {
+			isa = PBXGroup;
+			children = (
+				CBC0CF1C9A81A40CB6DD103B /* App */,
+				B0117EE98357C861976C31EC /* Components */,
+				5F3ECD53AE181072EF0838AB /* Models */,
+				E480142DCBA9BF5A141F949B /* Services */,
+				44A6E69B49FB4849E2958C24 /* Utilities */,
+				3BF34DC2F637AF037B1CA501 /* ViewModels */,
+				8AFA430F3AF730767C53A119 /* Views */,
+			);
+			path = RavanGo;
+			sourceTree = "<group>";
+		};
+		2AC16B428EFBB62868A0EA77 /* RavanGoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA36DCEA358F5D1FFA6AFE68 /* DevelopmentScriptFixture.swift */,
+				9F6F1ACFF61F695C03D8A377 /* ImportExportServiceTests.swift */,
+				56716E187A1D6D5B926C853E /* PreferencesStoreTests.swift */,
+				554DB4CB707BBF5EC663610F /* ScriptMetricsTests.swift */,
+			);
+			path = RavanGoTests;
+			sourceTree = "<group>";
+		};
+		31531FFC8AF2136F07ACF528 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				68FA13E71D573A97F56BFC9C /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		376942CF56039BCB6BBC7889 /* Teleprompter */ = {
+			isa = PBXGroup;
+			children = (
+				0C135AAE7F5F110CB6584D84 /* TeleprompterControlsView.swift */,
+				D7BD13E28A9888A65E2BA191 /* TeleprompterScrollView.swift */,
+				E4BB6E62278E8D7CFD2ED96F /* TeleprompterSettingsSheet.swift */,
+				B3AE3543C72127CA44B56D91 /* TeleprompterTextView.swift */,
+				0E960C218281D7126112AD9C /* TeleprompterView.swift */,
+			);
+			path = Teleprompter;
+			sourceTree = "<group>";
+		};
+		3BF34DC2F637AF037B1CA501 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6F3DD07E787B223CE96FBB85 /* TeleprompterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		44A6E69B49FB4849E2958C24 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				36CC110D2B92C3E80D17A487 /* AppConstants.swift */,
+				D0CE4D58A526752B6CB44486 /* AppFont.swift */,
+				97E0492FA6F54F4309004D1A /* Haptics.swift */,
+				5AB5EB87931071DEF6A94F90 /* ScriptMetrics.swift */,
+				B85A133AF967E01AFF56F54A /* SearchNormalizer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5F3ECD53AE181072EF0838AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B096ABD7C45794F8905D2AF3 /* Script.swift */,
+				65768BCD92F10D30831AD340 /* UserPreferences.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7B4EAFDFBEC96969A8DA44F1 = {
+			isa = PBXGroup;
+			children = (
+				07B2F64ABD94642832C18B19 /* RavanGo */,
+				2AC16B428EFBB62868A0EA77 /* RavanGoTests */,
+				FD20CBD0E416494069236C6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AFA430F3AF730767C53A119 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3F6B9F25B4693FE2496F6A0 /* Editor */,
+				CEBDB9D8A1486A144BF0C7D9 /* Scripts */,
+				31531FFC8AF2136F07ACF528 /* Settings */,
+				376942CF56039BCB6BBC7889 /* Teleprompter */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B0117EE98357C861976C31EC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				59FE654B117E3D3C0A0D692C /* EmptyStateView.swift */,
+				D73B7BCB02DED676726DB4F4 /* RemoteCommandView.swift */,
+				01B8DF963020D88A5AC9BD5F /* ShareSheet.swift */,
+				98FB65D3C535C28A6E899D88 /* SliderSettingRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B3F6B9F25B4693FE2496F6A0 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				08FA4E32036AA3ABB47867C3 /* ScriptEditorView.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		CBC0CF1C9A81A40CB6DD103B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2166C504EDA4CA4DBDF3B30B /* RavanGoApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CEBDB9D8A1486A144BF0C7D9 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				48CB046958C6775DE965771C /* ScriptRowView.swift */,
+				1EEDA9129AFECF965D25347E /* ScriptsView.swift */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		E480142DCBA9BF5A141F949B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D0A8575D6127D416BD5B9ED1 /* ImportExportService.swift */,
+				66E88355E95D1847FA7D992D /* PreferencesStore.swift */,
+				15AE2A92147DBAE5FD499F3C /* ScriptStorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FD20CBD0E416494069236C6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA1F33A55B80A76E236D422B /* RavanGo.app */,
+				54B3C6652EFB841789CD2C94 /* RavanGoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5000001 /* RavanGo */ = {isa = PBXNativeTarget; buildConfigurationList = 6000001; buildPhases = (4000001, 4000002, 4000003); buildRules = (); dependencies = (); name = RavanGo; productName = RavanGo; productReference = 3300001; productType = "com.apple.product-type.application"; };
-		5000002 /* RavanGoTests */ = {isa = PBXNativeTarget; buildConfigurationList = 6000002; buildPhases = (4000005, 4000004, 4000006); buildRules = (); dependencies = (5001001); name = RavanGoTests; productName = RavanGoTests; productReference = 3300002; productType = "com.apple.product-type.bundle.unit-test"; };
+		3EBF6730F614D69BC6CFBE80 /* RavanGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9271730B99F20E6DEEFF4843 /* Build configuration list for PBXNativeTarget "RavanGo" */;
+			buildPhases = (
+				6983DB5868FF068034DB84F9 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RavanGo;
+			packageProductDependencies = (
+			);
+			productName = RavanGo;
+			productReference = DA1F33A55B80A76E236D422B /* RavanGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91E2E93418F577E32263E80D /* RavanGoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D847747861307563244700 /* Build configuration list for PBXNativeTarget "RavanGoTests" */;
+			buildPhases = (
+				A746A472655C48AB6305C79B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FEE3793F3B6C37BD371BF3E4 /* PBXTargetDependency */,
+			);
+			name = RavanGoTests;
+			packageProductDependencies = (
+			);
+			productName = RavanGoTests;
+			productReference = 54B3C6652EFB841789CD2C94 /* RavanGoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5000000 /* Project object */ = {isa = PBXProject; attributes = { LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; ORGANIZATIONNAME = "Behnam Jalali"; TargetAttributes = { 5000001 = { CreatedOnToolsVersion = 16.0; }; 5000002 = { CreatedOnToolsVersion = 16.0; TestTargetID = 5000001; }; }; }; buildConfigurationList = 6000000; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, fa, Base); mainGroup = 3000000; productRefGroup = 3200000; projectDirPath = ""; projectRoot = ""; targets = (5000001, 5000002); };
+		329723F5BAB0B52ECCB83DDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3EBF6730F614D69BC6CFBE80 = {
+						ProvisioningStyle = Automatic;
+					};
+					91E2E93418F577E32263E80D = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0F1E6CDBC882D2A7DA36795A /* Build configuration list for PBXProject "RavanGo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7B4EAFDFBEC96969A8DA44F1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FD20CBD0E416494069236C6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EBF6730F614D69BC6CFBE80 /* RavanGo */,
+				91E2E93418F577E32263E80D /* RavanGoTests */,
+			);
+		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		4000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (1001022, 1001023, 1001026, 1001033); runOnlyForDeploymentPostprocessing = 0; };
-		4000006 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		4000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (1001001, 1001002, 1001003, 1001004, 1001005, 1001006, 1001007, 1001008, 1001009, 1001010, 1001011, 1001012, 1001013, 1001014, 1001015, 1001016, 1001017, 1001018, 1001019, 1001020, 1001021, 1001024, 1001025, 1001031, 1001032); runOnlyForDeploymentPostprocessing = 0; };
-		4000005 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (2001001, 2001002, 2001003, 2001004); runOnlyForDeploymentPostprocessing = 0; };
+		6983DB5868FF068034DB84F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB96227BA378350BEA8290E0 /* AppConstants.swift in Sources */,
+				93E2CF34FF9462CBC78F78CB /* AppFont.swift in Sources */,
+				83D6A7E3BE57A53254A7770B /* EmptyStateView.swift in Sources */,
+				288727078E156822E0FEB53A /* Haptics.swift in Sources */,
+				48453020D23369E3D76F802C /* ImportExportService.swift in Sources */,
+				AAEAD79083D67B38CBCCF68F /* PreferencesStore.swift in Sources */,
+				5A4C036DBABDB27283609CF7 /* RavanGoApp.swift in Sources */,
+				90BC19CC736B2774A48A3463 /* RemoteCommandView.swift in Sources */,
+				30C6C3B1EEEA07A6E7A3FB96 /* Script.swift in Sources */,
+				3A0578CE40E5F9B9B3D57227 /* ScriptEditorView.swift in Sources */,
+				48A3FE2615A150A29C77814C /* ScriptMetrics.swift in Sources */,
+				21F1893424F20D7479D34AC5 /* ScriptRowView.swift in Sources */,
+				A46AFBF917865A1D6D54A706 /* ScriptStorageService.swift in Sources */,
+				964C5014B3D6D38ED601CE28 /* ScriptsView.swift in Sources */,
+				38FCC91089AD5067C4DFB31E /* SearchNormalizer.swift in Sources */,
+				0CC4554BBBEA8AE2D4055F0D /* SettingsView.swift in Sources */,
+				BEA8CB255004C84189640191 /* ShareSheet.swift in Sources */,
+				1AEDCDEFFADEBAD2BDA3FD12 /* SliderSettingRow.swift in Sources */,
+				B0CCA4D4532521FA085218EF /* TeleprompterControlsView.swift in Sources */,
+				5D47194994E128D9E2D8C4BF /* TeleprompterScrollView.swift in Sources */,
+				4A1D435CAA65FDA186DFB39D /* TeleprompterSettingsSheet.swift in Sources */,
+				4E83E5727AF8DC0E526803AE /* TeleprompterTextView.swift in Sources */,
+				790C8E2DCDF4906F021717E2 /* TeleprompterView.swift in Sources */,
+				8FFDF14D23724B92455DBA1E /* TeleprompterViewModel.swift in Sources */,
+				5EC1CEA158CF34452474E9FF /* UserPreferences.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A746A472655C48AB6305C79B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60BA60CCFBFFD9F53BF894C1 /* DevelopmentScriptFixture.swift in Sources */,
+				8C28B7DC3B953F5382C4BD88 /* ImportExportServiceTests.swift in Sources */,
+				90D48AA95C2D3EA1CF81F72C /* PreferencesStoreTests.swift in Sources */,
+				91EF9E6B70D669B3928EB01C /* ScriptMetricsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5001001 /* PBXTargetDependency */ = {isa = PBXTargetDependency; target = 5000001; targetProxy = 5002001; };
+		FEE3793F3B6C37BD371BF3E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EBF6730F614D69BC6CFBE80 /* RavanGo */;
+			targetProxy = D8622B6D390C7E2420EB6ADB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXContainerItemProxy section */
-		5002001 /* PBXContainerItemProxy */ = {isa = PBXContainerItemProxy; containerPortal = 5000000; proxyType = 1; remoteGlobalIDString = 5000001; remoteInfo = RavanGo; };
-/* End PBXContainerItemProxy section */
-
 /* Begin XCBuildConfiguration section */
-		6001001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_LANGUAGE = en; INFOPLIST_FILE = RavanGo/Info.plist; MARKETING_VERSION = 1.0; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; };
-		6001002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_LANGUAGE = en; INFOPLIST_FILE = RavanGo/Info.plist; MARKETING_VERSION = 1.0; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; };
-		6002001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 18.0; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo"; };
-		6002002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 18.0; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo"; };
-		6000003 /* Project Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; }; name = Debug; };
-		6000004 /* Project Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; }; name = Release; };
+		230EB5A0C1EA69E43640D5E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo";
+			};
+			name = Release;
+		};
+		2CD9F58FB5F5A5E9E031772A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo";
+			};
+			name = Debug;
+		};
+		36C42A0AF981412C3B8573C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = RavanGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5C06AF4888672E7F9589068F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		5FC2E55B64ADAE1AA46FFC60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = RavanGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A8010C5FC5C080BADC7285A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6000000 /* Project configuration list */ = {isa = XCConfigurationList; buildConfigurations = (6000003, 6000004); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		6000001 /* RavanGo configuration list */ = {isa = XCConfigurationList; buildConfigurations = (6001001, 6001002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-		6000002 /* RavanGoTests configuration list */ = {isa = XCConfigurationList; buildConfigurations = (6002001, 6002002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		0F1E6CDBC882D2A7DA36795A /* Build configuration list for PBXProject "RavanGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C06AF4888672E7F9589068F /* Debug */,
+				A8010C5FC5C080BADC7285A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		65D847747861307563244700 /* Build configuration list for PBXNativeTarget "RavanGoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CD9F58FB5F5A5E9E031772A /* Debug */,
+				230EB5A0C1EA69E43640D5E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9271730B99F20E6DEEFF4843 /* Build configuration list for PBXNativeTarget "RavanGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36C42A0AF981412C3B8573C1 /* Debug */,
+				5FC2E55B64ADAE1AA46FFC60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5000000 /* Project object */;
+	rootObject = 329723F5BAB0B52ECCB83DDE /* Project object */;
 }
