@@ -17,7 +17,6 @@ enum ScriptStorageService {
         do {
             try context.save()
         } catch {
-            context.rollback()
             logger.error("SwiftData save failed: \(String(describing: error), privacy: .public)")
             throw ScriptStorageError.saveFailed
         }
