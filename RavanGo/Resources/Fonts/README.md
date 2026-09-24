@@ -28,6 +28,6 @@ The installer:
 3. Creates a local `FontLicense.txt` from the vendor file and inserts the supplied license code.
 4. Leaves all proprietary files Git-ignored.
 
-During an Xcode build, `scripts/copy-licensed-fonts.sh` copies the locally installed font files and the local `FontLicense.txt` into the application bundle. RavanGo registers the bundled fonts at runtime. If the files are not present, the build still succeeds and the app uses the Apple system font.
+Xcode includes the `Resources/Fonts` directory as an optional folder resource. If licensed font files and the local `FontLicense.txt` are present, they are bundled automatically and RavanGo registers them at runtime. If they are absent, the build still succeeds and the app uses the Apple system font.
 
 The Apache-2.0 source license does not apply to IRANYekanX.
