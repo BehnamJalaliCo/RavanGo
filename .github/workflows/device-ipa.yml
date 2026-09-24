@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/device-ipa.yml"
+      - "project.yml"
+      - "RavanGo/**"
+      - "RavanGo.xcodeproj/**"
   workflow_dispatch:
 
 permissions:
