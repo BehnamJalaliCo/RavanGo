@@ -1,0 +1,44 @@
+# Xcode
+build/
+DerivedData/
+
+# Licensed IRANYekanX binaries are supplied separately and must not be committed
+RavanGo/Resources/Fonts/*.ttf
+
+# Local handoff archives and uploaded source assets
+*.zip
+upload/
+
+# Workspace metadata
+.codex/
+.agents/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Signing and local secrets
+*.mobileprovision
+*.provisionprofile
+*.p12
+*.cer
+*.keychain
+Secrets.plist
+
+# Archives and local exports
+*.ipa
+*.dSYM.zip
+*.xcarchive
+
+# Local editor files
+.vscode/
+.idea/
