@@ -11,10 +11,6 @@
 		1001022 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1002024 /* PrivacyInfo.xcprivacy */; };
 		1001023 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1002023 /* Assets.xcassets */; };
 		1001026 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 1002027 /* Localizable.xcstrings */; };
-		1001027 /* IRANYekanXFaNum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1002028 /* IRANYekanXFaNum-Regular.ttf */; };
-		1001028 /* IRANYekanXFaNum-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1002029 /* IRANYekanXFaNum-Medium.ttf */; };
-		1001029 /* IRANYekanXFaNum-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1002030 /* IRANYekanXFaNum-DemiBold.ttf */; };
-		1001030 /* IRANYekanXFaNum-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1002031 /* IRANYekanXFaNum-Bold.ttf */; };
 		1001002 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002002 /* EmptyStateView.swift */; };
 		1001003 /* RemoteCommandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002003 /* RemoteCommandView.swift */; };
 		1001004 /* SliderSettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1002004 /* SliderSettingRow.swift */; };
@@ -73,10 +69,6 @@
 		1002023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1002024 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1002027 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		1002028 /* IRANYekanXFaNum-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanXFaNum-Regular.ttf; sourceTree = "<group>"; };
-		1002029 /* IRANYekanXFaNum-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanXFaNum-Medium.ttf; sourceTree = "<group>"; };
-		1002030 /* IRANYekanXFaNum-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanXFaNum-DemiBold.ttf; sourceTree = "<group>"; };
-		1002031 /* IRANYekanXFaNum-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANYekanXFaNum-Bold.ttf; sourceTree = "<group>"; };
 		1002032 /* SearchNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNormalizer.swift; sourceTree = "<group>"; };
 		1002033 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		2002001 /* ScriptMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptMetricsTests.swift; sourceTree = "<group>"; };
@@ -106,13 +98,13 @@
 		3105000 /* Services */ = {isa = PBXGroup; children = (1002007, 1002008, 1002025); path = Services; sourceTree = "<group>"; };
 		3106000 /* Components */ = {isa = PBXGroup; children = (1002002, 1002003, 1002004, 1002026); path = Components; sourceTree = "<group>"; };
 		3107000 /* Utilities */ = {isa = PBXGroup; children = (1002009, 1002010, 1002011, 1002032, 1002033); path = Utilities; sourceTree = "<group>"; };
-		3108000 /* Fonts */ = {isa = PBXGroup; children = (1002028, 1002029, 1002030, 1002031); path = Resources/Fonts; sourceTree = "<group>"; };
+		3108000 /* Fonts */ = {isa = PBXGroup; children = (); path = Resources/Fonts; sourceTree = "<group>"; };
 		3200000 /* Products */ = {isa = PBXGroup; children = (3300001, 3300002); name = Products; sourceTree = "<group>"; };
 		2003000 /* RavanGoTests */ = {isa = PBXGroup; children = (2002001, 2002002, 2002003, 2002004); path = RavanGoTests; sourceTree = "<group>"; };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5000001 /* RavanGo */ = {isa = PBXNativeTarget; buildConfigurationList = 6000001; buildPhases = (4000001, 4000002, 4000003); buildRules = (); dependencies = (); name = RavanGo; productName = RavanGo; productReference = 3300001; productType = "com.apple.product-type.application"; };
+		5000001 /* RavanGo */ = {isa = PBXNativeTarget; buildConfigurationList = 6000001; buildPhases = (4000001, 4000002, 4000003, 4000007); buildRules = (); dependencies = (); name = RavanGo; productName = RavanGo; productReference = 3300001; productType = "com.apple.product-type.application"; };
 		5000002 /* RavanGoTests */ = {isa = PBXNativeTarget; buildConfigurationList = 6000002; buildPhases = (4000005, 4000004, 4000006); buildRules = (); dependencies = (5001001); name = RavanGoTests; productName = RavanGoTests; productReference = 3300002; productType = "com.apple.product-type.bundle.unit-test"; };
 /* End PBXNativeTarget section */
 
@@ -121,9 +113,31 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (1001022, 1001023, 1001026, 1001027, 1001028, 1001029, 1001030); runOnlyForDeploymentPostprocessing = 0; };
+		4000003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (1001022, 1001023, 1001026); runOnlyForDeploymentPostprocessing = 0; };
 		4000006 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4000007 /* Copy Licensed Fonts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Licensed Fonts";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"${SRCROOT}/scripts/copy-licensed-fonts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (1001001, 1001002, 1001003, 1001004, 1001005, 1001006, 1001007, 1001008, 1001009, 1001010, 1001011, 1001012, 1001013, 1001014, 1001015, 1001016, 1001017, 1001018, 1001019, 1001020, 1001021, 1001024, 1001025, 1001031, 1001032); runOnlyForDeploymentPostprocessing = 0; };
@@ -139,8 +153,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin XCBuildConfiguration section */
-		6001001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_LANGUAGE = en; INFOPLIST_FILE = RavanGo/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; };
-		6001002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_LANGUAGE = en; INFOPLIST_FILE = RavanGo/Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; };
+		6001001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_LANGUAGE = en; ENABLE_USER_SCRIPT_SANDBOXING = NO; INFOPLIST_FILE = RavanGo/Info.plist; MARKETING_VERSION = 1.0.0; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; };
+		6001002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon; ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; DEVELOPMENT_LANGUAGE = en; ENABLE_USER_SCRIPT_SANDBOXING = NO; INFOPLIST_FILE = RavanGo/Info.plist; MARKETING_VERSION = 1.0.0; IPHONEOS_DEPLOYMENT_TARGET = 18.0; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks"; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_EMIT_LOC_STRINGS = YES; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; };
 		6002001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 18.0; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo"; };
 		6002002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { BUNDLE_LOADER = "$(TEST_HOST)"; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 1; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 18.0; PRODUCT_BUNDLE_IDENTIFIER = com.behnamjalali.ravango.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_STRICT_CONCURRENCY = complete; SWIFT_VERSION = 6.0; TARGETED_DEVICE_FAMILY = 1; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RavanGo.app/RavanGo"; };
 		6000003 /* Project Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; }; name = Debug; };
