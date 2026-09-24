@@ -19,28 +19,28 @@ struct SettingsView: View {
             Section("Teleprompter") {
                 SliderSettingRow(
                     title: "Default speed",
-                    valueLabel: String(format: "%.2fx", preferences.values.defaultSpeed),
+                    valueLabel: AppFormatting.speed(preferences.values.defaultSpeed, language: preferences.values.language),
                     value: preferenceBinding(\.defaultSpeed),
                     range: 0.25...3.0,
                     step: 0.05
                 )
                 SliderSettingRow(
                     title: "Default font size",
-                    valueLabel: "\(Int(preferences.values.defaultFontSize)) pt",
+                    valueLabel: AppFormatting.points(preferences.values.defaultFontSize, language: preferences.values.language),
                     value: preferenceBinding(\.defaultFontSize),
                     range: 24...80,
                     step: 1
                 )
                 SliderSettingRow(
                     title: "Default line spacing",
-                    valueLabel: "\(Int(preferences.values.defaultLineSpacing)) pt",
+                    valueLabel: AppFormatting.points(preferences.values.defaultLineSpacing, language: preferences.values.language),
                     value: preferenceBinding(\.defaultLineSpacing),
                     range: 0...36,
                     step: 1
                 )
                 SliderSettingRow(
                     title: "Default margins",
-                    valueLabel: "\(Int(preferences.values.defaultMargins)) pt",
+                    valueLabel: AppFormatting.points(preferences.values.defaultMargins, language: preferences.values.language),
                     value: preferenceBinding(\.defaultMargins),
                     range: 12...72,
                     step: 1
@@ -57,7 +57,7 @@ struct SettingsView: View {
             Section("Reading") {
                 SliderSettingRow(
                     title: "Words per minute",
-                    valueLabel: "\(Int(preferences.values.wordsPerMinute)) wpm",
+                    valueLabel: AppFormatting.wordsPerMinute(preferences.values.wordsPerMinute, language: preferences.values.language),
                     value: preferenceBinding(\.wordsPerMinute),
                     range: 80...220,
                     step: 5
@@ -94,14 +94,14 @@ struct SettingsView: View {
             }
 
             Section("About") {
-                Text("RavanGo")
-                    .font(.headline)
+                Text(AppConstants.appName)
+                    .ravanGoFont(.headline, weight: .semibold)
                 Text("Created by Behnam Jalali")
                     .foregroundStyle(.secondary)
                 LabeledContent("Version", value: appVersion)
                 LabeledContent("Build", value: buildNumber)
                 Text("All scripts and settings are stored locally on the user’s device.")
-                    .font(.footnote)
+                    .ravanGoFont(.footnote)
                     .foregroundStyle(.secondary)
             }
         }
@@ -169,7 +169,7 @@ struct SettingsView: View {
             exportURL = try ImportExportService.exportURL(for: scripts)
             showingShareSheet = true
         } catch {
-            alertMessage = error.localizedDescription
+            alertMessage = localizedImportExportError(error)
         }
     }
 
@@ -184,12 +184,24 @@ struct SettingsView: View {
             let count = try ImportExportService.importScripts(
                 from: data,
                 into: modelContext,
-                existingScripts: scripts
+                existingScripts: scripts,
+                language: preferences.values.language
             )
-            alertMessage = String(localized: "Imported \(count) script.", locale: preferences.values.language.locale)
+            if count == 1 {
+                alertMessage = String(localized: "Imported \(count) script.", locale: preferences.values.language.locale)
+            } else {
+                alertMessage = String(localized: "Imported \(count) scripts.", locale: preferences.values.language.locale)
+            }
         } catch {
-            alertMessage = error.localizedDescription
+            alertMessage = localizedImportExportError(error)
         }
+    }
+
+    private func localizedImportExportError(_ error: Error) -> String {
+        if let importError = error as? ImportExportError {
+            return importError.localizedMessage(for: preferences.values.language)
+        }
+        return String(localized: "Something went wrong.", locale: preferences.values.language.locale)
     }
 }
 
