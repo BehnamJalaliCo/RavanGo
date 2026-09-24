@@ -14,6 +14,8 @@
   <a href="https://github.com/BehnamJalaliCo/RavanGo"><img src="https://img.shields.io/badge/Swift-6.0-F05138.svg" alt="Swift 6"></a>
   <a href="https://github.com/BehnamJalaliCo/RavanGo"><img src="https://img.shields.io/badge/UI-SwiftUI-0A84FF.svg" alt="SwiftUI"></a>
   <a href="https://github.com/BehnamJalaliCo/RavanGo"><img src="https://img.shields.io/badge/privacy-on--device-30D158.svg" alt="On-device privacy"></a>
+  <a href="https://github.com/BehnamJalaliCo/RavanGo/actions/workflows/ci.yml"><img src="https://github.com/BehnamJalaliCo/RavanGo/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="Apache-2.0"></a>
 </p>
 
 <p align="center">
@@ -33,6 +35,14 @@
 RavanGo is a native iPhone teleprompter created by Behnam Jalali.
 
 The app keeps the reading area clear. It stores scripts and settings on the device. It works without an account, a server, or a required network connection.
+
+### Screenshot
+
+<p align="center">
+  <img src="docs/screenshots/library.png" width="360" alt="RavanGo script library on iPhone Simulator">
+</p>
+
+The screenshot is captured from a real iPhone Simulator by GitHub Actions after the CI build and tests pass.
 
 ### Features
 
@@ -109,16 +119,24 @@ The bundle identifier is `com.behnamjalali.ravango`. Change it in Xcode if you n
 
 ### IRANYekanX font setup
 
-RavanGo supports these Persian numeral font files:
+RavanGo supports four optional licensed Persian font files:
 
 - `IRANYekanXFaNum-Regular.ttf`
 - `IRANYekanXFaNum-Medium.ttf`
 - `IRANYekanXFaNum-DemiBold.ttf`
 - `IRANYekanXFaNum-Bold.ttf`
 
-The files are registered in `Info.plist` and added to the app resources when they are present locally. The app uses the PostScript names embedded in the files and falls back to the Apple system font when a font is not available.
+IRANYekanX is proprietary Fontiran software and is not redistributed as raw TTF files in this public repository. A clean clone builds without the fonts and falls back to the Apple system font.
 
-IRANYekanX is a separately licensed proprietary font. It is not automatically covered by the source code license. The font binaries are Git-ignored. Add them locally only when you have the required license. See [`RavanGo/Resources/Fonts/README.md`](RavanGo/Resources/Fonts/README.md).
+Licensed users can install their local copy from the original vendor ZIP:
+
+~~~sh
+FONTIRAN_LICENSE_CODE=123456 sh scripts/install-iranyekanx.sh "/path/to/IRANYekanX(Pro).zip"
+~~~
+
+Replace `123456` with your own six-digit Fontiran license code. The code, extracted fonts, and populated `FontLicense.txt` remain local and are Git-ignored. During build, the optional files are copied into the app bundle and registered at runtime.
+
+See [`RavanGo/Resources/Fonts/README.md`](RavanGo/Resources/Fonts/README.md) for details.
 
 ### Physical iPhone installation
 
@@ -171,9 +189,11 @@ Run tests in Xcode with **Product → Test**.
 
 ### License
 
-The source license has not been selected yet. The repository currently contains a license placeholder. Select a source license before public distribution.
+RavanGo source code is licensed under the **Apache License 2.0**. See [LICENSE](LICENSE).
 
-IRANYekanX is a separately licensed font. Its license is not included in the source license. Do not redistribute the font binaries unless the applicable font license permits it.
+The repository also contains a [NOTICE](NOTICE) file for attribution and third-party asset boundaries.
+
+IRANYekanX is separate proprietary software and is not covered by Apache-2.0. Raw font files and the populated Fontiran license file are not distributed in this public repository.
 
 ### Contributing
 
@@ -253,14 +273,17 @@ flowchart LR
 
 ### فونت IRANYekanX
 
-نسخه فارسی برنامه برای رابط کاربری و خواندن متن از IRANYekanXFaNum استفاده می‌کند. فایل‌های زیر در پروژه پشتیبانی می‌شوند:
+RavanGo از چهار وزن اختیاری و لایسنس‌دار IRANYekanXFaNum پشتیبانی می‌کند. فایل خام فونت در ریپوی عمومی منتشر نمی‌شود، چون مجوز Fontiran انتشار یا اشتراک‌گذاری بدون مجوز را محدود می‌کند.
 
-- `IRANYekanXFaNum-Regular.ttf`
-- `IRANYekanXFaNum-Medium.ttf`
-- `IRANYekanXFaNum-DemiBold.ttf`
-- `IRANYekanXFaNum-Bold.ttf`
+Clone تمیز پروژه بدون فونت نیز Build می‌شود و در نبود IRANYekanX از فونت سیستم Apple استفاده می‌کند.
 
-IRANYekanX یک فونت مالکیتی و دارای لایسنس جداگانه است. این فونت بخشی از لایسنس سورس‌کد نیست. فایل‌های باینری فونت در Git نادیده گرفته می‌شوند. فقط در صورت داشتن مجوز لازم، فایل‌ها را به‌صورت محلی اضافه کنید. در صورت نبود فونت، برنامه از فونت سیستم Apple استفاده می‌کند.
+دارنده لایسنس می‌تواند با ZIP اصلی Fontiran و کد ۶ رقمی خودش فونت‌ها را به‌صورت محلی نصب کند:
+
+~~~sh
+FONTIRAN_LICENSE_CODE=123456 sh scripts/install-iranyekanx.sh "/path/to/IRANYekanX(Pro).zip"
+~~~
+
+عدد نمونه را با کد لایسنس خود جایگزین کنید و آن را Commit نکنید. اسکریپت فقط چهار وزن Regular، Medium، DemiBold و Bold را استخراج می‌کند و `FontLicense.txt` محلی را نیز طبق فایل اصلی Fontiran می‌سازد.
 
 ### حریم خصوصی و داده محلی
 
@@ -280,9 +303,9 @@ RavanGo کاربر را Track نمی‌کند. متن‌ها را به سرور 
 
 ### لایسنس
 
-نوع لایسنس سورس‌کد هنوز انتخاب نشده است. قبل از انتشار عمومی، یک لایسنس مناسب برای پروژه انتخاب کنید.
+سورس‌کد RavanGo تحت **Apache License 2.0** منتشر می‌شود. فایل [LICENSE](LICENSE) متن کامل مجوز را دارد و [NOTICE](NOTICE) مرز دارایی‌های شخص ثالث را مشخص می‌کند.
 
-لایسنس IRANYekanX جدا از سورس‌کد است. فایل فونت را بدون مجوز معتبر بازتوزیع نکنید.
+فونت IRANYekanX تحت لایسنس جداگانه Fontiran است و فایل‌های خام آن تحت Apache-2.0 قرار نمی‌گیرند.
 
 ### مشارکت
 
@@ -292,4 +315,4 @@ RavanGo کاربر را Track نمی‌کند. متن‌ها را به سرور 
 
 ## Project status
 
-RavanGo is an active development project. It is not presented as an App Store release.
+RavanGo is an active development project. GitHub Actions validates clean builds and tests. The automated v1.0.0 GitHub release remains a pre-release until final physical-iPhone validation is complete.
