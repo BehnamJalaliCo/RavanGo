@@ -30,6 +30,14 @@ jobs:
             echo "needed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Install XcodeGen
+        if: steps.screenshot.outputs.needed == 'true'
+        run: brew install xcodegen
+
+      - name: Regenerate Xcode project
+        if: steps.screenshot.outputs.needed == 'true'
+        run: xcodegen generate --spec project.yml
+
       - name: Select iPhone simulator
         if: steps.screenshot.outputs.needed == 'true'
         id: simulator
