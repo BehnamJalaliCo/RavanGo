@@ -1,0 +1,49 @@
+name: Regenerate Xcode Project
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - project.yml
+      - .github/workflows/regenerate-project.yml
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: macos-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate project
+        run: xcodegen generate --spec project.yml
+
+      - name: Validate generated resources
+        shell: bash
+        run: |
+          grep -q "PBXResourcesBuildPhase" RavanGo.xcodeproj/project.pbxproj
+          grep -q "Assets.xcassets" RavanGo.xcodeproj/project.pbxproj
+          grep -q "Localizable.xcstrings" RavanGo.xcodeproj/project.pbxproj
+          grep -q "PrivacyInfo.xcprivacy" RavanGo.xcodeproj/project.pbxproj
+          xcodebuild -list -project RavanGo.xcodeproj
+
+      - name: Commit generated project
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add RavanGo.xcodeproj
+          if git diff --cached --quiet; then
+            echo "Generated project is already current."
+            exit 0
+          fi
+          git commit -m "build: regenerate Xcode project with resources"
+          git push origin main
