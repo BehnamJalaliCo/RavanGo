@@ -18,11 +18,13 @@
 		48A3FE2615A150A29C77814C /* ScriptMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5EB87931071DEF6A94F90 /* ScriptMetrics.swift */; };
 		4A1D435CAA65FDA186DFB39D /* TeleprompterSettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BB6E62278E8D7CFD2ED96F /* TeleprompterSettingsSheet.swift */; };
 		4E83E5727AF8DC0E526803AE /* TeleprompterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AE3543C72127CA44B56D91 /* TeleprompterTextView.swift */; };
+		51FAF4DC51860BD0DFC6C13C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F049B121C1FEBB814EAF272B /* PrivacyInfo.xcprivacy */; };
 		5A4C036DBABDB27283609CF7 /* RavanGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166C504EDA4CA4DBDF3B30B /* RavanGoApp.swift */; };
 		5D47194994E128D9E2D8C4BF /* TeleprompterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BD13E28A9888A65E2BA191 /* TeleprompterScrollView.swift */; };
 		5EC1CEA158CF34452474E9FF /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65768BCD92F10D30831AD340 /* UserPreferences.swift */; };
 		60BA60CCFBFFD9F53BF894C1 /* DevelopmentScriptFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36DCEA358F5D1FFA6AFE68 /* DevelopmentScriptFixture.swift */; };
 		790C8E2DCDF4906F021717E2 /* TeleprompterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E960C218281D7126112AD9C /* TeleprompterView.swift */; };
+		7ADBEB70CF208E085F66121A /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = CFC2589D573C72685FB4FF61 /* Fonts */; };
 		83D6A7E3BE57A53254A7770B /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FE654B117E3D3C0A0D692C /* EmptyStateView.swift */; };
 		8C28B7DC3B953F5382C4BD88 /* ImportExportServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6F1ACFF61F695C03D8A377 /* ImportExportServiceTests.swift */; };
 		8FFDF14D23724B92455DBA1E /* TeleprompterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DD07E787B223CE96FBB85 /* TeleprompterViewModel.swift */; };
@@ -36,6 +38,8 @@
 		AB96227BA378350BEA8290E0 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CC110D2B92C3E80D17A487 /* AppConstants.swift */; };
 		B0CCA4D4532521FA085218EF /* TeleprompterControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C135AAE7F5F110CB6584D84 /* TeleprompterControlsView.swift */; };
 		BEA8CB255004C84189640191 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8DF963020D88A5AC9BD5F /* ShareSheet.swift */; };
+		EAA0F9F6A153C296F8FA1966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2489838E308969AE53D1DD12 /* Assets.xcassets */; };
+		F76B02573DAFC6BE58C90C95 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0CB835F4C27E96B9F81035DD /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +56,12 @@
 		01B8DF963020D88A5AC9BD5F /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		08FA4E32036AA3ABB47867C3 /* ScriptEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptEditorView.swift; sourceTree = "<group>"; };
 		0C135AAE7F5F110CB6584D84 /* TeleprompterControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterControlsView.swift; sourceTree = "<group>"; };
+		0CB835F4C27E96B9F81035DD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		0E960C218281D7126112AD9C /* TeleprompterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterView.swift; sourceTree = "<group>"; };
 		15AE2A92147DBAE5FD499F3C /* ScriptStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptStorageService.swift; sourceTree = "<group>"; };
 		1EEDA9129AFECF965D25347E /* ScriptsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptsView.swift; sourceTree = "<group>"; };
 		2166C504EDA4CA4DBDF3B30B /* RavanGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavanGoApp.swift; sourceTree = "<group>"; };
+		2489838E308969AE53D1DD12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36CC110D2B92C3E80D17A487 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		48CB046958C6775DE965771C /* ScriptRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptRowView.swift; sourceTree = "<group>"; };
 		54B3C6652EFB841789CD2C94 /* RavanGoTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = RavanGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,21 +80,27 @@
 		B096ABD7C45794F8905D2AF3 /* Script.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Script.swift; sourceTree = "<group>"; };
 		B3AE3543C72127CA44B56D91 /* TeleprompterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterTextView.swift; sourceTree = "<group>"; };
 		B85A133AF967E01AFF56F54A /* SearchNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNormalizer.swift; sourceTree = "<group>"; };
+		CFC2589D573C72685FB4FF61 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = RavanGo/Resources/Fonts; sourceTree = SOURCE_ROOT; };
 		D0A8575D6127D416BD5B9ED1 /* ImportExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportExportService.swift; sourceTree = "<group>"; };
 		D0CE4D58A526752B6CB44486 /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		D73B7BCB02DED676726DB4F4 /* RemoteCommandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCommandView.swift; sourceTree = "<group>"; };
 		D7BD13E28A9888A65E2BA191 /* TeleprompterScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterScrollView.swift; sourceTree = "<group>"; };
 		DA1F33A55B80A76E236D422B /* RavanGo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = RavanGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BB6E62278E8D7CFD2ED96F /* TeleprompterSettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeleprompterSettingsSheet.swift; sourceTree = "<group>"; };
+		F049B121C1FEBB814EAF272B /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		07B2F64ABD94642832C18B19 /* RavanGo */ = {
 			isa = PBXGroup;
 			children = (
+				2489838E308969AE53D1DD12 /* Assets.xcassets */,
+				0CB835F4C27E96B9F81035DD /* Localizable.xcstrings */,
+				F049B121C1FEBB814EAF272B /* PrivacyInfo.xcprivacy */,
 				CBC0CF1C9A81A40CB6DD103B /* App */,
 				B0117EE98357C861976C31EC /* Components */,
 				5F3ECD53AE181072EF0838AB /* Models */,
+				AB543D5D739A6D60D92883E5 /* Resources */,
 				E480142DCBA9BF5A141F949B /* Services */,
 				44A6E69B49FB4849E2958C24 /* Utilities */,
 				3BF34DC2F637AF037B1CA501 /* ViewModels */,
@@ -177,6 +189,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		AB543D5D739A6D60D92883E5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CFC2589D573C72685FB4FF61 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B0117EE98357C861976C31EC /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +260,7 @@
 			buildConfigurationList = 9271730B99F20E6DEEFF4843 /* Build configuration list for PBXNativeTarget "RavanGo" */;
 			buildPhases = (
 				6983DB5868FF068034DB84F9 /* Sources */,
+				094C2D6B54E9538179F65B60 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +327,20 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		094C2D6B54E9538179F65B60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAA0F9F6A153C296F8FA1966 /* Assets.xcassets in Resources */,
+				7ADBEB70CF208E085F66121A /* Fonts in Resources */,
+				F76B02573DAFC6BE58C90C95 /* Localizable.xcstrings in Resources */,
+				51FAF4DC51860BD0DFC6C13C /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6983DB5868FF068034DB84F9 /* Sources */ = {
