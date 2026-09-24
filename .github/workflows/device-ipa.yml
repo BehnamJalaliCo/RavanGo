@@ -22,6 +22,12 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Regenerate Xcode project
+        run: xcodegen generate --spec project.yml
+
       - name: Validate project
         run: |
           plutil -lint RavanGo/Info.plist
@@ -40,6 +46,20 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             build
+
+      - name: Verify bundled resources
+        shell: bash
+        run: |
+          APP_PATH="$RUNNER_TEMP/RavanGoDeviceDerivedData/Build/Products/Release-iphoneos/RavanGo.app"
+          test -d "$APP_PATH"
+          test -f "$APP_PATH/Assets.car"
+          test -f "$APP_PATH/PrivacyInfo.xcprivacy"
+
+          if ! find "$APP_PATH" -type f \( -name 'Localizable.strings' -o -name 'Localizable.loctable' \) | grep -q .; then
+            echo "Compiled localization resources are missing from the app bundle."
+            find "$APP_PATH" -maxdepth 3 -type f -print
+            exit 1
+          fi
 
       - name: Package IPA
         shell: bash
