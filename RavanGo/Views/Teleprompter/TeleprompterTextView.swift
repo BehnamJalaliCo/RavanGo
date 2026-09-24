@@ -18,11 +18,11 @@ struct TeleprompterTextView: View {
                 .frame(height: max(24, viewportHeight * 0.42))
 
             Text(text)
-                .font(AppFont.teleprompterFont(font, size: fontSize, direction: layoutDirection))
+                .font(AppFont.teleprompterFont(font, size: fontSize, text: text))
                 .foregroundStyle(textColor.color)
                 .multilineTextAlignment(alignment.alignment)
                 .lineSpacing(lineSpacing)
-                .frame(maxWidth: .infinity, alignment: alignment == .center ? .center : .leading)
+                .frame(maxWidth: .infinity, alignment: alignment.frameAlignment)
                 .scaleEffect(x: mirrored ? -1 : 1, y: 1)
                 .padding(.horizontal, margins)
 
