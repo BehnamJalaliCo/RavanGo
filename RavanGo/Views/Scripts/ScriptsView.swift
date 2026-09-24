@@ -117,10 +117,12 @@ struct ScriptsView: View {
     }
 
     private func createScript() {
-        let script = Script()
+        let script = Script(title: String(localized: "Untitled Script", locale: preferences.values.language.locale))
         modelContext.insert(script)
         if saveContext() {
             editingScript = script
+        } else {
+            modelContext.delete(script)
         }
     }
 
@@ -129,12 +131,12 @@ struct ScriptsView: View {
         modelContext.insert(copy)
         if saveContext() {
             editingScript = copy
+        } else {
+            modelContext.delete(copy)
         }
     }
 
     private func rename(_ script: Script) {
-        // The editor provides the full title field. Opening it is safer than
-        // using a small inline alert text field on iPhone.
         editingScript = script
     }
 
@@ -143,7 +145,8 @@ struct ScriptsView: View {
         do {
             try ScriptStorageService.save(modelContext)
         } catch {
-            errorMessage = String(localized: "The script could not be removed. Please try again.")
+            modelContext.insert(script)
+            errorMessage = String(localized: "The script could not be removed. Please try again.", locale: preferences.values.language.locale)
             showingStorageError = true
         }
     }
@@ -166,7 +169,7 @@ struct ScriptsView: View {
             try ScriptStorageService.save(modelContext)
             return true
         } catch {
-            errorMessage = String(localized: "RavanGo could not save this script. Please try again.")
+            errorMessage = String(localized: "RavanGo could not save this script. Please try again.", locale: preferences.values.language.locale)
             showingStorageError = true
             return false
         }
@@ -181,6 +184,8 @@ struct ScriptsView: View {
         modelContext.insert(sample)
         if saveContext() {
             didSeedWelcome = true
+        } else {
+            modelContext.delete(sample)
         }
     }
 }
