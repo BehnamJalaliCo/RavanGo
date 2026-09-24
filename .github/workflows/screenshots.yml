@@ -1,0 +1,102 @@
+name: Screenshots
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+jobs:
+  capture-library:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
+    runs-on: macos-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Check whether screenshot already exists
+        id: screenshot
+        shell: bash
+        run: |
+          if [ -f docs/screenshots/library.png ]; then
+            echo "needed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "needed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Select iPhone simulator
+        if: steps.screenshot.outputs.needed == 'true'
+        id: simulator
+        shell: bash
+        run: |
+          UDID="$(python3 - <<'PY'
+          import json
+          import subprocess
+
+          payload = json.loads(
+              subprocess.check_output(
+                  ["xcrun", "simctl", "list", "devices", "available", "-j"],
+                  text=True,
+              )
+          )
+
+          candidates = []
+          for runtime, devices in payload.get("devices", {}).items():
+              for device in devices:
+                  name = device.get("name", "")
+                  if device.get("isAvailable") and name.startswith("iPhone"):
+                      score = 0
+                      if "Pro Max" in name:
+                          score += 30
+                      elif "Pro" in name:
+                          score += 20
+                      if "SE" in name:
+                          score -= 20
+                      candidates.append((runtime, score, name, device["udid"]))
+
+          if not candidates:
+              raise SystemExit("No available iPhone Simulator was found.")
+
+          candidates.sort(reverse=True)
+          print(candidates[0][3])
+          PY
+          )"
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+      - name: Build app for screenshot
+        if: steps.screenshot.outputs.needed == 'true'
+        run: |
+          xcodebuild             -project RavanGo.xcodeproj             -scheme RavanGo             -configuration Debug             -sdk iphonesimulator             -destination 'generic/platform=iOS Simulator'             -derivedDataPath "$RUNNER_TEMP/RavanGoScreenshotDerivedData"             CODE_SIGNING_ALLOWED=NO             build
+
+      - name: Capture real Simulator screenshot
+        if: steps.screenshot.outputs.needed == 'true'
+        run: |
+          UDID="${{ steps.simulator.outputs.udid }}"
+          xcrun simctl shutdown "$UDID" || true
+          xcrun simctl erase "$UDID"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 || true
+
+          APP_PATH="$RUNNER_TEMP/RavanGoScreenshotDerivedData/Build/Products/Debug-iphonesimulator/RavanGo.app"
+          xcrun simctl install "$UDID" "$APP_PATH"
+          xcrun simctl launch "$UDID" com.behnamjalali.ravango
+          sleep 5
+
+          mkdir -p docs/screenshots
+          xcrun simctl io "$UDID" screenshot docs/screenshots/library.png
+
+      - name: Commit screenshot
+        if: steps.screenshot.outputs.needed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/screenshots/library.png
+          git commit -m "docs: add real Simulator screenshot"
+          git push origin main
