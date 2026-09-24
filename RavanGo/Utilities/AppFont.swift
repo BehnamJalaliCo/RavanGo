@@ -2,6 +2,7 @@ import CoreText
 import SwiftUI
 import UIKit
 
+@MainActor
 enum AppFont {
     static let regular = "IRANYekanXFaNum-Regular"
     static let medium = "IRANYekanXFaNum-Medium"
