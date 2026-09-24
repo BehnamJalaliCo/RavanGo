@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Verify licensed fonts are not tracked
+        run: |
+          if git ls-files '*.ttf' | grep -q .; then
+            echo "Proprietary TTF files must not be committed to the public repository."
+            exit 1
+          fi
+
+      - name: Validate property lists
+        run: |
+          plutil -lint RavanGo/Info.plist
+          plutil -lint RavanGo/PrivacyInfo.xcprivacy
+
+      - name: Inspect project
+        run: xcodebuild -list -project RavanGo.xcodeproj
+
+      - name: Debug simulator build
+        run: |
+          xcodebuild             -project RavanGo.xcodeproj             -scheme RavanGo             -configuration Debug             -sdk iphonesimulator             -destination 'generic/platform=iOS Simulator'             -derivedDataPath "$RUNNER_TEMP/RavanGoDerivedData"             CODE_SIGNING_ALLOWED=NO             clean build
+
+      - name: Select iPhone simulator
+        id: simulator
+        shell: bash
+        run: |
+          UDID="$(python3 - <<'PY'
+          import json
+          import subprocess
+
+          payload = json.loads(
+              subprocess.check_output(
+                  ["xcrun", "simctl", "list", "devices", "available", "-j"],
+                  text=True,
+              )
+          )
+
+          candidates = []
+          for runtime, devices in payload.get("devices", {}).items():
+              for device in devices:
+                  name = device.get("name", "")
+                  if device.get("isAvailable") and name.startswith("iPhone"):
+                      score = 0
+                      if "Pro Max" in name:
+                          score += 30
+                      elif "Pro" in name:
+                          score += 20
+                      if "SE" in name:
+                          score -= 20
+                      candidates.append((runtime, score, name, device["udid"]))
+
+          if not candidates:
+              raise SystemExit("No available iPhone Simulator was found.")
+
+          candidates.sort(reverse=True)
+          print(candidates[0][3])
+          PY
+          )"
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          echo "Selected simulator: $UDID"
+
+      - name: Run unit tests
+        run: |
+          xcrun simctl boot "${{ steps.simulator.outputs.udid }}" || true
+          xcrun simctl bootstatus "${{ steps.simulator.outputs.udid }}" -b
+          xcodebuild             -project RavanGo.xcodeproj             -scheme RavanGo             -configuration Debug             -destination "platform=iOS Simulator,id=${{ steps.simulator.outputs.udid }}"             -derivedDataPath "$RUNNER_TEMP/RavanGoDerivedData"             CODE_SIGNING_ALLOWED=NO             test
+
+      - name: Release simulator build
+        run: |
+          xcodebuild             -project RavanGo.xcodeproj             -scheme RavanGo             -configuration Release             -sdk iphonesimulator             -destination 'generic/platform=iOS Simulator'             -derivedDataPath "$RUNNER_TEMP/RavanGoReleaseDerivedData"             CODE_SIGNING_ALLOWED=NO             build
