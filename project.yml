@@ -27,7 +27,6 @@ targets:
       - path: RavanGo/Services
       - path: RavanGo/Components
       - path: RavanGo/Utilities
-    resources:
       - path: RavanGo/Assets.xcassets
       - path: RavanGo/Localizable.xcstrings
       - path: RavanGo/PrivacyInfo.xcprivacy
