@@ -7,6 +7,8 @@ struct TeleprompterView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.layoutDirection) private var appLayoutDirection
+    @EnvironmentObject private var preferences: PreferencesStore
     @StateObject private var viewModel: TeleprompterViewModel
 
     @State private var showingSpeedSheet = false
@@ -42,7 +44,10 @@ struct TeleprompterView: View {
                     restartToken: viewModel.restartToken,
                     pendingSeek: viewModel.pendingSeek,
                     viewportHeight: viewportHeight,
-                    layoutDirection: viewModel.scriptDirection.resolvedLayoutDirection(for: viewModel.script.content),
+                    layoutDirection: viewModel.scriptDirection.resolvedLayoutDirection(
+                        for: viewModel.script.content,
+                        fallback: appLayoutDirection
+                    ),
                     onUserPause: {
                         viewModel.pause()
                     },
@@ -84,7 +89,7 @@ struct TeleprompterView: View {
                             viewModel.controlsVisible = true
                             scheduleControlsHide()
                         } label: {
-                            Label("Unlock Controls", systemImage: "lock.open")
+                            Label("Unlock controls", systemImage: "lock.open")
                                 .padding(.horizontal, 18)
                                 .padding(.vertical, 12)
                                 .background(.ultraThinMaterial, in: Capsule())
@@ -111,7 +116,9 @@ struct TeleprompterView: View {
                             scheduleControlsHide()
                         case .second:
                             viewModel.controlsVisible.toggle()
-                            if viewModel.controlsVisible { scheduleControlsHide() }
+                            if viewModel.controlsVisible {
+                                scheduleControlsHide()
+                            }
                         }
                     }
             )
@@ -131,11 +138,18 @@ struct TeleprompterView: View {
                 do {
                     try ScriptStorageService.save(modelContext)
                 } catch {
-                    viewModel.preferenceErrorMessage = String(localized: "RavanGo could not save this script.")
+                    viewModel.preferenceErrorMessage = String(
+                        localized: "RavanGo could not save this script.",
+                        locale: preferences.values.language.locale
+                    )
                 }
             }
             .onChange(of: scenePhase) { _, phase in
-                UIApplication.shared.isIdleTimerDisabled = phase == .active
+                if phase == .active {
+                    UIApplication.shared.isIdleTimerDisabled = true
+                } else {
+                    UIApplication.shared.isIdleTimerDisabled = previousIdleTimerDisabled
+                }
             }
         }
         .toolbar(.hidden, for: .navigationBar)
@@ -152,7 +166,13 @@ struct TeleprompterView: View {
         )) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text(viewModel.preferenceErrorMessage ?? String(localized: "RavanGo could not save these settings."))
+            Text(
+                viewModel.preferenceErrorMessage
+                    ?? String(
+                        localized: "RavanGo could not save these settings.",
+                        locale: preferences.values.language.locale
+                    )
+            )
         }
         .animation(.easeInOut(duration: 0.2), value: viewModel.controlsVisible)
     }
@@ -190,10 +210,20 @@ private struct FocusGuideView: View {
 
 #Preview {
     NavigationStack {
-        TeleprompterView(script: Script(
-            title: "Welcome",
-            content: "This is a realistic teleprompter preview.\n\nThe reading area stays dominant while controls remain available with one tap.\n\nUse the speed and text controls to adjust the experience for your voice and setup."
-        ), preferences: PreferencesStore(defaults: UserDefaults(suiteName: "TeleprompterPreview") ?? .standard))
+        TeleprompterView(
+            script: Script(
+                title: "Welcome",
+                content: "This is a realistic teleprompter preview.\n\nThe reading area stays dominant while controls remain available with one tap.\n\nUse the speed and text controls to adjust the experience for your voice and setup."
+            ),
+            preferences: PreferencesStore(
+                defaults: UserDefaults(suiteName: "TeleprompterPreview") ?? .standard
+            )
+        )
     }
+    .environmentObject(
+        PreferencesStore(
+            defaults: UserDefaults(suiteName: "TeleprompterPreviewEnvironment") ?? .standard
+        )
+    )
     .modelContainer(for: Script.self, inMemory: true)
 }
