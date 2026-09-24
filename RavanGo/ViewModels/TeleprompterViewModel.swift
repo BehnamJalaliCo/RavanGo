@@ -25,6 +25,7 @@ final class TeleprompterViewModel: ObservableObject {
     @Published var controlsVisible = true
 
     @Published private(set) var restartToken = 0
+    @Published var pendingSeek: CGFloat = 0
     private var countdownTask: Task<Void, Never>?
     private let preferences: PreferencesStore
 
@@ -108,7 +109,7 @@ final class TeleprompterViewModel: ObservableObject {
     }
 
     func handleRemoteCommand(_ command: RemoteCommand) {
-        guard !isLocked || command == .togglePlayback else { return }
+        guard !isLocked || command == .togglePlayback || command == .restart else { return }
         switch command {
         case .togglePlayback: togglePlayback()
         case .decreaseSpeed: speed = max(AppConstants.speedRange.lowerBound, speed - 0.25)
@@ -145,12 +146,8 @@ final class TeleprompterViewModel: ObservableObject {
     }
 
     func seek(by points: CGFloat) {
-        // The scroll view owns the exact offset. This value is consumed by the
-        // view as a small relative movement request.
         pendingSeek += points
     }
-
-    @Published var pendingSeek: CGFloat = 0
 
     private func beginCountdown() {
         countdownTask?.cancel()
