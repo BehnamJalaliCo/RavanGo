@@ -110,7 +110,7 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5000000 /* Project object */ = {isa = PBXProject; attributes = { LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; ORGANIZATIONNAME = Behnam Jalali; TargetAttributes = { 5000001 = { CreatedOnToolsVersion = 16.0; }; 5000002 = { CreatedOnToolsVersion = 16.0; TestTargetID = 5000001; }; }; }; buildConfigurationList = 6000000; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, fa, Base); mainGroup = 3000000; productRefGroup = 3200000; projectDirPath = ""; projectRoot = ""; targets = (5000001, 5000002); };
+		5000000 /* Project object */ = {isa = PBXProject; attributes = { LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; ORGANIZATIONNAME = "Behnam Jalali"; TargetAttributes = { 5000001 = { CreatedOnToolsVersion = 16.0; }; 5000002 = { CreatedOnToolsVersion = 16.0; TestTargetID = 5000001; }; }; }; buildConfigurationList = 6000000; compatibilityVersion = "Xcode 15.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, fa, Base); mainGroup = 3000000; productRefGroup = 3200000; projectDirPath = ""; projectRoot = ""; targets = (5000001, 5000002); };
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
