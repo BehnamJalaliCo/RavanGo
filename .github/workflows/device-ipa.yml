@@ -55,6 +55,11 @@ jobs:
           test -f "$APP_PATH/Assets.car"
           test -f "$APP_PATH/PrivacyInfo.xcprivacy"
 
+          VERSION="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$APP_PATH/Info.plist")"
+          BUILD="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$APP_PATH/Info.plist")"
+          test "$VERSION" = "1.0"
+          test "$BUILD" = "2"
+
           if ! find "$APP_PATH" -type f \( -name 'Localizable.strings' -o -name 'Localizable.loctable' \) | grep -q .; then
             echo "Compiled localization resources are missing from the app bundle."
             find "$APP_PATH" -maxdepth 3 -type f -print
