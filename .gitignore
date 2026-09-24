@@ -4,6 +4,7 @@ DerivedData/
 
 # Licensed IRANYekanX binaries are supplied separately and must not be committed
 RavanGo/Resources/Fonts/*.ttf
+RavanGo/Resources/Fonts/FontLicense.txt
 
 # Local handoff archives and uploaded source assets
 *.zip
