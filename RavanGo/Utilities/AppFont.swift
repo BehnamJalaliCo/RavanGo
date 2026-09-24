@@ -1,3 +1,4 @@
+import CoreText
 import SwiftUI
 import UIKit
 
@@ -7,15 +8,36 @@ enum AppFont {
     static let demiBold = "IRANYekanXFaNum-DemiBold"
     static let bold = "IRANYekanXFaNum-Bold"
 
-    static func uiFont(for language: AppLanguage, style: Font.TextStyle = .body, weight: Font.Weight = .regular) -> Font {
-        guard language == .persian, isAvailable else { return .system(style, design: .default).weight(weight) }
+    private static let bundledFiles = [
+        "IRANYekanXFaNum-Regular",
+        "IRANYekanXFaNum-Medium",
+        "IRANYekanXFaNum-DemiBold",
+        "IRANYekanXFaNum-Bold"
+    ]
+
+    private static var didAttemptRegistration = false
+
+    static func uiFont(
+        for language: AppLanguage,
+        style: Font.TextStyle = .body,
+        weight: Font.Weight = .regular
+    ) -> Font {
+        guard language == .persian, isAvailable else {
+            return .system(style, design: .default).weight(weight)
+        }
         return .custom(fontName(for: weight), size: baseSize(for: style), relativeTo: style)
     }
 
-    static func teleprompterFont(_ font: TeleprompterFont, size: CGFloat, direction: LayoutDirection) -> Font {
+    static func teleprompterFont(
+        _ font: TeleprompterFont,
+        size: CGFloat,
+        direction: LayoutDirection
+    ) -> Font {
         switch font {
         case .automatic:
-            return direction == .rightToLeft && isAvailable ? .custom(regular, size: size) : .system(size: size)
+            return direction == .rightToLeft && isAvailable
+                ? .custom(regular, size: size)
+                : .system(size: size)
         case .iranYekan:
             return isAvailable ? .custom(regular, size: size) : .system(size: size)
         case .system:
@@ -27,8 +49,30 @@ enum AppFont {
         }
     }
 
+    static func registerBundledFontsIfPresent() {
+        guard !didAttemptRegistration else { return }
+        didAttemptRegistration = true
+
+        for resource in bundledFiles {
+            guard let url = Bundle.main.url(forResource: resource, withExtension: "ttf") else {
+                continue
+            }
+
+            var error: Unmanaged<CFError>?
+            let registered = CTFontManagerRegisterFontsForURL(url as CFURL, .process, &error)
+
+            if !registered {
+                let nsError = error?.takeRetainedValue() as Error?
+                if let nsError {
+                    NSLog("RavanGo could not register font %@: %@", resource, String(describing: nsError))
+                }
+            }
+        }
+    }
+
     private static var isAvailable: Bool {
-        UIFont(name: regular, size: 17) != nil
+        registerBundledFontsIfPresent()
+        return UIFont(name: regular, size: 17) != nil
     }
 
     private static func fontName(for weight: Font.Weight) -> String {
