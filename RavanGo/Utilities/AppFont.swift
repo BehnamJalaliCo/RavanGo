@@ -32,11 +32,11 @@ enum AppFont {
     static func teleprompterFont(
         _ font: TeleprompterFont,
         size: CGFloat,
-        direction: LayoutDirection
+        text: String
     ) -> Font {
         switch font {
         case .automatic:
-            return direction == .rightToLeft && isAvailable
+            return containsRightToLeftLetters(in: text) && isAvailable
                 ? .custom(regular, size: size)
                 : .system(size: size)
         case .iranYekan:
@@ -77,6 +77,18 @@ enum AppFont {
         return UIFont(name: regular, size: 17) != nil
     }
 
+    private static func containsRightToLeftLetters(in text: String) -> Bool {
+        text.unicodeScalars.contains { scalar in
+            let isRightToLeftRange = switch scalar.value {
+            case 0x0590...0x05FF, 0x0600...0x08FF, 0xFB1D...0xFDFF, 0xFE70...0xFEFF:
+                true
+            default:
+                false
+            }
+            return isRightToLeftRange && CharacterSet.letters.contains(scalar)
+        }
+    }
+
     private static func fontName(for weight: Font.Weight) -> String {
         if weight == .bold || weight == .heavy || weight == .black { return bold }
         if weight == .semibold { return demiBold }
@@ -98,5 +110,23 @@ enum AppFont {
         case .footnote: 13
         default: 17
         }
+    }
+}
+
+@MainActor
+private struct RavanGoFontModifier: ViewModifier {
+    @Environment(\.locale) private var locale
+    let style: Font.TextStyle
+    let weight: Font.Weight
+
+    func body(content: Content) -> some View {
+        content.font(AppFont.uiFont(for: AppLanguage(locale: locale), style: style, weight: weight))
+    }
+}
+
+extension View {
+    @MainActor
+    func ravanGoFont(_ style: Font.TextStyle, weight: Font.Weight = .regular) -> some View {
+        modifier(RavanGoFontModifier(style: style, weight: weight))
     }
 }
