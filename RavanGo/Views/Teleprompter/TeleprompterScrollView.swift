@@ -111,10 +111,6 @@ struct TeleprompterScrollView: UIViewRepresentable {
             self.onSeekConsumed = onSeekConsumed
         }
 
-        deinit {
-            displayLink?.invalidate()
-        }
-
         func invalidate() {
             stopDisplayLink()
             hostController = nil
