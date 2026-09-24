@@ -1,121 +1,2038 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "About" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "About" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "درباره" } } } },
-    "Add Some Text First" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Some Text First" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "اول کمی متن اضافه کنید" } } } },
-    "Alignment" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Alignment" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تراز متن" } } } },
-    "All scripts and settings are stored locally on the user’s device." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "All scripts and settings are stored locally on the user’s device." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "همه متن‌ها و تنظیمات روی دستگاه شما ذخیره می‌شوند." } } } },
-    "Automatic" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Automatic" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خودکار" } } } },
-    "Background" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Background" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "پس‌زمینه" } } } },
-    "Black" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Black" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "مشکی" } } } },
-    "Build" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Build" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "بیلد" } } } },
-    "Cancel" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Cancel" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "لغو" } } } },
-    "Charcoal" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Charcoal" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "ذغالی" } } } },
-    "Clear Text" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Clear Text" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "پاک کردن متن" } } } },
-    "Clear all text?" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Clear all text?" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "همه متن پاک شود؟" } } } },
-    "Color scheme" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Color scheme" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "حالت رنگی" } } } },
-    "Countdown" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Countdown" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "شمارش معکوس" } } } },
-    "Created by Behnam Jalali" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Created by Behnam Jalali" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "ساخته‌شده توسط Behnam Jalali" } } } },
-    "Data" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Data" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "داده‌ها" } } } },
-    "Default font size" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Default font size" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "اندازه پیش‌فرض متن" } } } },
-    "Default line spacing" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Default line spacing" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "فاصله پیش‌فرض خطوط" } } } },
-    "Default margins" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Default margins" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "حاشیه پیش‌فرض" } } } },
-    "Default speed" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Default speed" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سرعت پیش‌فرض" } } } },
-    "Delete" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "حذف" } } } },
-    "Done" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Done" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "انجام شد" } } } },
-    "Duplicate" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Duplicate" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "کپی کردن" } } } },
-    "English" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "English" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "English" } } } },
-    "Estimated time" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Estimated time" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "زمان تقریبی" } } } },
-    "Export Scripts" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Export Scripts" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خروجی گرفتن از متن‌ها" } } } },
-    "Fast" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Fast" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سریع" } } } },
-    "Fine adjustment" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Fine adjustment" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تنظیم دقیق" } } } },
-    "Focus guide" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Focus guide" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "راهنمای تمرکز" } } } },
-    "Font" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Font" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "قلم" } } } },
-    "Font size" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Font size" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "اندازه متن" } } } },
-    "Import Scripts" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Import Scripts" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "وارد کردن متن‌ها" } } } },
-    "Language" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Language" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "زبان" } } } },
-    "Left to Right" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Left to Right" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "چپ به راست" } } } },
-    "Light" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Light" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "روشن" } } } },
-    "Mirror mode" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Mirror mode" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "حالت آینه‌ای" } } } },
-    "Monospaced" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Monospaced" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تک‌فاصله" } } } },
-    "No Scripts Yet" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "No Scripts Yet" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "هنوز متنی ندارید" } } } },
-    "Normal" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Normal" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "عادی" } } } },
-    "Off" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Off" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خاموش" } } } },
-    "Persian" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Persian" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "فارسی" } } } },
-    "Reading" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Reading" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خواندن" } } } },
-    "Reading estimate" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Reading estimate" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "برآورد خواندن" } } } },
-    "Reading guide" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Reading guide" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "راهنمای خواندن" } } } },
-    "Right to Left" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Right to Left" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "راست به چپ" } } } },
-    "RavanGo" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo" } } } },
-    "Search scripts" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Search scripts" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "جست‌وجوی متن‌ها" } } } },
-    "Settings" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تنظیمات" } } } },
-    "Side margins" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Side margins" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "حاشیه‌های کناری" } } } },
-    "Slow" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Slow" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "آهسته" } } } },
-    "Start Teleprompter" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Start Teleprompter" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "شروع تله‌پرامپتر" } } } },
-    "Style" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Style" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "ظاهر" } } } },
-    "System" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "System" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سیستم" } } } },
-    "Text" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Text" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن" } } } },
-    "Text Direction" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Text Direction" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "جهت متن" } } } },
-    "Text Settings" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Text Settings" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تنظیمات متن" } } } },
-    "Text color" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Text color" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "رنگ متن" } } } },
-    "Teleprompter" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Teleprompter" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تله‌پرامپتر" } } } },
-    "Try Again" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Try Again" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تلاش دوباره" } } } },
-    "Vertical position" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Vertical position" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "موقعیت عمودی" } } } },
-    "Welcome" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Welcome" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خوش آمدید" } } } },
-    "Words" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Words" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "کلمه" } } } },
-    "Words per minute" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Words per minute" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "کلمه در دقیقه" } } } },
-    "sample_welcome_title" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Welcome" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خوش آمدید" } } } },
-    "sample_welcome_content" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Welcome to RavanGo.\n\nTap the play button to start scrolling. Double-tap the reading area to play or pause. Tap once to show the controls.\n\nYou can adjust speed, text size, spacing, margins, and mirror mode at any time. Your scripts and settings stay on this device." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "به RavanGo خوش آمدید.\n\nبرای شروع حرکت متن، دکمه پخش را بزنید. برای پخش یا مکث، دوبار روی ناحیه خواندن ضربه بزنید. با یک ضربه کنترل‌ها نمایش داده می‌شوند.\n\nهر زمان خواستید می‌توانید سرعت، اندازه متن، فاصله خطوط، حاشیه‌ها و حالت آینه‌ای را تغییر دهید. متن‌ها و تنظیمات شما روی همین دستگاه می‌مانند." } } } },
-    "Create Script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Create Script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن جدید" } } } },
-    "Scripts" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Scripts" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن‌ها" } } } },
-    "Rename" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Rename" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تغییر نام" } } } },
-    "Scroll Speed" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Scroll Speed" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سرعت حرکت" } } } },
-    "Presets" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Presets" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "پیش‌تنظیم‌ها" } } } },
-    "Preset" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Preset" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "پیش‌تنظیم" } } } },
-    "Settings Error" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Settings Error" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خطای تنظیمات" } } } },
-    "Storage Error" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Storage Error" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "خطای ذخیره‌سازی" } } } },
-    "Local Storage Unavailable" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Local Storage Unavailable" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "ذخیره‌سازی محلی در دسترس نیست" } } } },
-    "Script title" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Script title" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "عنوان متن" } } } },
-    "Script text" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Script text" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن اصلی" } } } },
-    "The teleprompter needs a script before it can start." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "The teleprompter needs a script before it can start." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "برای شروع، تله‌پرامپتر به متن نیاز دارد." } } } },
-    "Close teleprompter" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Close teleprompter" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "بستن تله‌پرامپتر" } } } },
-    "Restart" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Restart" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "شروع دوباره" } } } },
-    "Play" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Play" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "پخش" } } } },
-    "Pause" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Pause" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "مکث" } } } },
-    "Speed" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Speed" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سرعت" } } } },
-    "Mirror" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Mirror" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "آینه‌ای" } } } },
-    "Lock controls" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Lock controls" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "قفل کردن کنترل‌ها" } } } },
-    "Unlock controls" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Unlock controls" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "باز کردن قفل کنترل‌ها" } } } },
-    "Teleprompter script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Teleprompter script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن تله‌پرامپتر" } } } },
-    "Untitled Script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Untitled Script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن بدون عنوان" } } } },
-    "No text yet" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "No text yet" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "هنوز متنی نیست" } } } },
-    "Follow System" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Follow System" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "هماهنگ با سیستم" } } } },
-    "3 seconds" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "3 seconds" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "۳ ثانیه" } } } },
-    "5 seconds" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "5 seconds" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "۵ ثانیه" } } } },
-    "10 seconds" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "10 seconds" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "۱۰ ثانیه" } } } },
-    "Left" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Left" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "چپ" } } } },
-    "Center" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Center" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "وسط" } } } },
-    "White" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "White" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سفید" } } } },
-    "Warm White" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Warm White" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سفید گرم" } } } },
-    "Yellow" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Yellow" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "زرد" } } } },
-    "Navy" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Navy" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "سرمه‌ای" } } } },
-    "Create a script, then open Teleprompter when you are ready to read." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Create a script, then open Teleprompter when you are ready to read." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "یک متن بسازید و هر وقت آماده بودید تله‌پرامپتر را باز کنید." } } } },
-    "Imported %lld script." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Imported %lld script." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "%lld متن وارد شد." } } } },
-    "RavanGo could not open its local script library. Please try again." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not open its local script library. Please try again." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست کتابخانه متن‌ها را باز کند. دوباره تلاش کنید." } } } },
-    "RavanGo is preparing its local script library." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo is preparing its local script library." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo در حال آماده‌سازی کتابخانه متن‌هاست." } } } },
-    "RavanGo could not save this script. Please try again." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save this script. Please try again." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست این متن را ذخیره کند. دوباره تلاش کنید." } } } },
-    "RavanGo could not save this script." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save this script." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست این متن را ذخیره کند." } } } },
-    "RavanGo could not save your preferences." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save your preferences." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست تنظیمات شما را ذخیره کند." } } } },
-    "RavanGo could not read its saved preferences. Default settings are active." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not read its saved preferences. Default settings are active." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست تنظیمات ذخیره‌شده را بخواند. تنظیمات پیش‌فرض فعال شد." } } } },
-    "The script could not be removed. Please try again." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "The script could not be removed. Please try again." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "این متن حذف نشد. دوباره تلاش کنید." } } } },
-    "Create your first script to begin." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Create your first script to begin." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "برای شروع اولین متن خود را بسازید." } } } },
-    "RavanGo could not save this script. Your last saved version was restored." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save this script. Your last saved version was restored." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست این متن را ذخیره کند. آخرین نسخه ذخیره‌شده برگردانده شد." } } } },
-    "RavanGo could not save your scripts. Please try again." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save your scripts. Please try again." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست متن‌های شما را ذخیره کند. دوباره تلاش کنید." } } } },
-    "This file is not a valid RavanGo backup." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "This file is not a valid RavanGo backup." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "این فایل پشتیبان معتبر RavanGo نیست." } } } },
-    "The backup does not contain any scripts." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "The backup does not contain any scripts." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "فایل پشتیبان متنی ندارد." } } } },
-    "RavanGo could not create the export file." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not create the export file." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست فایل خروجی را بسازد." } } } },
-    "RavanGo could not save the imported scripts." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save the imported scripts." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست متن‌های واردشده را ذخیره کند." } } } },
-    "Imported Script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Imported Script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن واردشده" } } } }
+  "sourceLanguage": "en",
+  "strings": {
+    "About": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "درباره"
+          }
+        }
+      }
+    },
+    "Add Some Text First": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add Some Text First"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اول کمی متن اضافه کنید"
+          }
+        }
+      }
+    },
+    "Alignment": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alignment"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تراز متن"
+          }
+        }
+      }
+    },
+    "All scripts and settings are stored locally on the user’s device.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All scripts and settings are stored locally on the user’s device."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "همه متن‌ها و تنظیمات روی دستگاه شما ذخیره می‌شوند."
+          }
+        }
+      }
+    },
+    "Automatic": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatic"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خودکار"
+          }
+        }
+      }
+    },
+    "Background": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Background"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پس‌زمینه"
+          }
+        }
+      }
+    },
+    "Black": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Black"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشکی"
+          }
+        }
+      }
+    },
+    "Build": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Build"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بیلد"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "لغو"
+          }
+        }
+      }
+    },
+    "Charcoal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Charcoal"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ذغالی"
+          }
+        }
+      }
+    },
+    "Clear Text": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear Text"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پاک کردن متن"
+          }
+        }
+      }
+    },
+    "Clear all text?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear all text?"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "همه متن پاک شود؟"
+          }
+        }
+      }
+    },
+    "Color scheme": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Color scheme"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حالت رنگی"
+          }
+        }
+      }
+    },
+    "Countdown": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Countdown"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شمارش معکوس"
+          }
+        }
+      }
+    },
+    "Created by Behnam Jalali": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Created by Behnam Jalali"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ساخته‌شده توسط Behnam Jalali"
+          }
+        }
+      }
+    },
+    "Data": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "داده‌ها"
+          }
+        }
+      }
+    },
+    "Default font size": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default font size"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اندازه پیش‌فرض متن"
+          }
+        }
+      }
+    },
+    "Default line spacing": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default line spacing"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فاصله پیش‌فرض خطوط"
+          }
+        }
+      }
+    },
+    "Default margins": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default margins"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حاشیه پیش‌فرض"
+          }
+        }
+      }
+    },
+    "Default speed": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default speed"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سرعت پیش‌فرض"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حذف"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انجام شد"
+          }
+        }
+      }
+    },
+    "Duplicate": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duplicate"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کپی کردن"
+          }
+        }
+      }
+    },
+    "English": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "English"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "English"
+          }
+        }
+      }
+    },
+    "Estimated time": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estimated time"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "زمان تقریبی"
+          }
+        }
+      }
+    },
+    "Export Scripts": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Export Scripts"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خروجی گرفتن از متن‌ها"
+          }
+        }
+      }
+    },
+    "Fast": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fast"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سریع"
+          }
+        }
+      }
+    },
+    "Fine adjustment": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fine adjustment"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنظیم دقیق"
+          }
+        }
+      }
+    },
+    "Focus guide": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Focus guide"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "راهنمای تمرکز"
+          }
+        }
+      }
+    },
+    "Font": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Font"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قلم"
+          }
+        }
+      }
+    },
+    "Font size": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Font size"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "اندازه متن"
+          }
+        }
+      }
+    },
+    "Import Scripts": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import Scripts"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وارد کردن متن‌ها"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "زبان"
+          }
+        }
+      }
+    },
+    "Left to Right": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Left to Right"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "چپ به راست"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "روشن"
+          }
+        }
+      }
+    },
+    "Mirror mode": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mirror mode"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حالت آینه‌ای"
+          }
+        }
+      }
+    },
+    "Monospaced": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monospaced"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تک‌فاصله"
+          }
+        }
+      }
+    },
+    "No Scripts Yet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Scripts Yet"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هنوز متنی ندارید"
+          }
+        }
+      }
+    },
+    "Normal": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Normal"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عادی"
+          }
+        }
+      }
+    },
+    "Off": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Off"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خاموش"
+          }
+        }
+      }
+    },
+    "Persian": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Persian"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فارسی"
+          }
+        }
+      }
+    },
+    "Reading": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خواندن"
+          }
+        }
+      }
+    },
+    "Reading estimate": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading estimate"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برآورد خواندن"
+          }
+        }
+      }
+    },
+    "Reading guide": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading guide"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "راهنمای خواندن"
+          }
+        }
+      }
+    },
+    "Right to Left": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Right to Left"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "راست به چپ"
+          }
+        }
+      }
+    },
+    "RavanGo": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo"
+          }
+        }
+      }
+    },
+    "Search scripts": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search scripts"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جست‌وجوی متن‌ها"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنظیمات"
+          }
+        }
+      }
+    },
+    "Side margins": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Side margins"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "حاشیه‌های کناری"
+          }
+        }
+      }
+    },
+    "Slow": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slow"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آهسته"
+          }
+        }
+      }
+    },
+    "Start Teleprompter": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start Teleprompter"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شروع تله‌پرامپتر"
+          }
+        }
+      }
+    },
+    "Style": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Style"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ظاهر"
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سیستم"
+          }
+        }
+      }
+    },
+    "Text": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن"
+          }
+        }
+      }
+    },
+    "Text Direction": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text Direction"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "جهت متن"
+          }
+        }
+      }
+    },
+    "Text Settings": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text Settings"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تنظیمات متن"
+          }
+        }
+      }
+    },
+    "Text color": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text color"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "رنگ متن"
+          }
+        }
+      }
+    },
+    "Teleprompter": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teleprompter"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تله‌پرامپتر"
+          }
+        }
+      }
+    },
+    "Try Again": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try Again"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تلاش دوباره"
+          }
+        }
+      }
+    },
+    "Vertical position": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vertical position"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "موقعیت عمودی"
+          }
+        }
+      }
+    },
+    "Welcome": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خوش آمدید"
+          }
+        }
+      }
+    },
+    "Words": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Words"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کلمه"
+          }
+        }
+      }
+    },
+    "Words per minute": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Words per minute"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کلمه در دقیقه"
+          }
+        }
+      }
+    },
+    "sample_welcome_title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خوش آمدید"
+          }
+        }
+      }
+    },
+    "sample_welcome_content": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to RavanGo.\n\nTap the play button to start scrolling. Double-tap the reading area to play or pause. Tap once to show the controls.\n\nYou can adjust speed, text size, spacing, margins, and mirror mode at any time. Your scripts and settings stay on this device."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "به RavanGo خوش آمدید.\n\nبرای شروع حرکت متن، دکمه پخش را بزنید. برای پخش یا مکث، دوبار روی ناحیه خواندن ضربه بزنید. با یک ضربه کنترل‌ها نمایش داده می‌شوند.\n\nهر زمان خواستید می‌توانید سرعت، اندازه متن، فاصله خطوط، حاشیه‌ها و حالت آینه‌ای را تغییر دهید. متن‌ها و تنظیمات شما روی همین دستگاه می‌مانند."
+          }
+        }
+      }
+    },
+    "Create Script": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create Script"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن جدید"
+          }
+        }
+      }
+    },
+    "Scripts": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scripts"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن‌ها"
+          }
+        }
+      }
+    },
+    "Rename": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rename"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تغییر نام"
+          }
+        }
+      }
+    },
+    "Scroll Speed": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scroll Speed"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سرعت حرکت"
+          }
+        }
+      }
+    },
+    "Presets": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Presets"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پیش‌تنظیم‌ها"
+          }
+        }
+      }
+    },
+    "Preset": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preset"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پیش‌تنظیم"
+          }
+        }
+      }
+    },
+    "Settings Error": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings Error"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خطای تنظیمات"
+          }
+        }
+      }
+    },
+    "Storage Error": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Storage Error"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "خطای ذخیره‌سازی"
+          }
+        }
+      }
+    },
+    "Local Storage Unavailable": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local Storage Unavailable"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ذخیره‌سازی محلی در دسترس نیست"
+          }
+        }
+      }
+    },
+    "Script title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Script title"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "عنوان متن"
+          }
+        }
+      }
+    },
+    "Script text": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Script text"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن اصلی"
+          }
+        }
+      }
+    },
+    "The teleprompter needs a script before it can start.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The teleprompter needs a script before it can start."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برای شروع، تله‌پرامپتر به متن نیاز دارد."
+          }
+        }
+      }
+    },
+    "Close teleprompter": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close teleprompter"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "بستن تله‌پرامپتر"
+          }
+        }
+      }
+    },
+    "Restart": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restart"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شروع دوباره"
+          }
+        }
+      }
+    },
+    "Play": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "پخش"
+          }
+        }
+      }
+    },
+    "Pause": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مکث"
+          }
+        }
+      }
+    },
+    "Speed": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Speed"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سرعت"
+          }
+        }
+      }
+    },
+    "Mirror": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mirror"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "آینه‌ای"
+          }
+        }
+      }
+    },
+    "Lock controls": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lock controls"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "قفل کردن کنترل‌ها"
+          }
+        }
+      }
+    },
+    "Unlock controls": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock controls"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "باز کردن قفل کنترل‌ها"
+          }
+        }
+      }
+    },
+    "Teleprompter script": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Teleprompter script"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن تله‌پرامپتر"
+          }
+        }
+      }
+    },
+    "Untitled Script": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Untitled Script"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن بدون عنوان"
+          }
+        }
+      }
+    },
+    "No text yet": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No text yet"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هنوز متنی نیست"
+          }
+        }
+      }
+    },
+    "Follow System": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow System"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "هماهنگ با سیستم"
+          }
+        }
+      }
+    },
+    "3 seconds": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "3 seconds"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "۳ ثانیه"
+          }
+        }
+      }
+    },
+    "5 seconds": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5 seconds"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "۵ ثانیه"
+          }
+        }
+      }
+    },
+    "10 seconds": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "10 seconds"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "۱۰ ثانیه"
+          }
+        }
+      }
+    },
+    "Left": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Left"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "چپ"
+          }
+        }
+      }
+    },
+    "Center": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Center"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "وسط"
+          }
+        }
+      }
+    },
+    "White": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "White"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سفید"
+          }
+        }
+      }
+    },
+    "Warm White": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warm White"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سفید گرم"
+          }
+        }
+      }
+    },
+    "Yellow": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yellow"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "زرد"
+          }
+        }
+      }
+    },
+    "Navy": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Navy"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "سرمه‌ای"
+          }
+        }
+      }
+    },
+    "Create a script, then open Teleprompter when you are ready to read.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create a script, then open Teleprompter when you are ready to read."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "یک متن بسازید و هر وقت آماده بودید تله‌پرامپتر را باز کنید."
+          }
+        }
+      }
+    },
+    "Imported %lld script.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imported %lld script."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld متن وارد شد."
+          }
+        }
+      }
+    },
+    "RavanGo could not open its local script library. Please try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not open its local script library. Please try again."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست کتابخانه متن‌ها را باز کند. دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "RavanGo is preparing its local script library.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo is preparing its local script library."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo در حال آماده‌سازی کتابخانه متن‌هاست."
+          }
+        }
+      }
+    },
+    "RavanGo could not save this script. Please try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save this script. Please try again."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست این متن را ذخیره کند. دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "RavanGo could not save this script.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save this script."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست این متن را ذخیره کند."
+          }
+        }
+      }
+    },
+    "RavanGo could not save your preferences.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save your preferences."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست تنظیمات شما را ذخیره کند."
+          }
+        }
+      }
+    },
+    "RavanGo could not read its saved preferences. Default settings are active.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not read its saved preferences. Default settings are active."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست تنظیمات ذخیره‌شده را بخواند. تنظیمات پیش‌فرض فعال شد."
+          }
+        }
+      }
+    },
+    "The script could not be removed. Please try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The script could not be removed. Please try again."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "این متن حذف نشد. دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "Create your first script to begin.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create your first script to begin."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "برای شروع اولین متن خود را بسازید."
+          }
+        }
+      }
+    },
+    "RavanGo could not save this script. Your last saved version was restored.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save this script. Your last saved version was restored."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست این متن را ذخیره کند. آخرین نسخه ذخیره‌شده برگردانده شد."
+          }
+        }
+      }
+    },
+    "RavanGo could not save your scripts. Please try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save your scripts. Please try again."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست متن‌های شما را ذخیره کند. دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "This file is not a valid RavanGo backup.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This file is not a valid RavanGo backup."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "این فایل پشتیبان معتبر RavanGo نیست."
+          }
+        }
+      }
+    },
+    "The backup does not contain any scripts.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The backup does not contain any scripts."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "فایل پشتیبان متنی ندارد."
+          }
+        }
+      }
+    },
+    "RavanGo could not create the export file.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not create the export file."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست فایل خروجی را بسازد."
+          }
+        }
+      }
+    },
+    "RavanGo could not save the imported scripts.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save the imported scripts."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست متن‌های واردشده را ذخیره کند."
+          }
+        }
+      }
+    },
+    "Imported Script": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imported Script"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "متن واردشده"
+          }
+        }
+      }
+    },
+    "Imported %lld scripts.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Imported %lld scripts."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld متن وارد شد."
+          }
+        }
+      }
+    },
+    "Leading": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Leading"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ابتدای خط"
+          }
+        }
+      }
+    },
+    "Trailing": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trailing"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "انتهای خط"
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تأیید"
+          }
+        }
+      }
+    },
+    "Something went wrong.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Something went wrong."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "مشکلی پیش آمد."
+          }
+        }
+      }
+    },
+    "RavanGo could not save these settings.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save these settings."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست این تنظیمات را ذخیره کند."
+          }
+        }
+      }
+    },
+    "RavanGo could not save this script. Your changes remain on screen.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo could not save this script. Your changes remain on screen."
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RavanGo نتوانست این متن را ذخیره کند. تغییرات شما روی صفحه باقی می‌ماند."
+          }
+        }
+      }
+    },
+    "Open the teleprompter for this script": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open the teleprompter for this script"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "تله‌پرامپتر این متن را باز می‌کند"
+          }
+        }
+      }
+    },
+    "points_short": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pt"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "نقطه"
+          }
+        }
+      }
+    },
+    "percent_sign": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "٪"
+          }
+        }
+      }
+    },
+    "wpm_short": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "wpm"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "کلمه در دقیقه"
+          }
+        }
+      }
+    },
+    "Countdown %lld": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Countdown %lld"
+          }
+        },
+        "fa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "شمارش معکوس %lld"
+          }
+        }
+      }
+    }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }
