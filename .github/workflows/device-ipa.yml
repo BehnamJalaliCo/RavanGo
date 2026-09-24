@@ -1,0 +1,64 @@
+name: Device IPA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/device-ipa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-unsigned-device-ipa:
+    runs-on: macos-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Validate project
+        run: |
+          plutil -lint RavanGo/Info.plist
+          plutil -lint RavanGo/PrivacyInfo.xcprivacy
+          xcodebuild -list -project RavanGo.xcodeproj
+
+      - name: Build unsigned Release app for iPhone
+        run: |
+          xcodebuild \
+            -project RavanGo.xcodeproj \
+            -scheme RavanGo \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/RavanGoDeviceDerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build
+
+      - name: Package IPA
+        shell: bash
+        run: |
+          APP_PATH="$RUNNER_TEMP/RavanGoDeviceDerivedData/Build/Products/Release-iphoneos/RavanGo.app"
+          test -d "$APP_PATH"
+
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          cp -R "$APP_PATH" "$RUNNER_TEMP/ipa/Payload/RavanGo.app"
+
+          cd "$RUNNER_TEMP/ipa"
+          /usr/bin/zip -qry "$GITHUB_WORKSPACE/RavanGo-1.0-build2-unsigned.ipa" Payload
+
+          /usr/bin/unzip -l "$GITHUB_WORKSPACE/RavanGo-1.0-build2-unsigned.ipa" | head -40
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RavanGo-1.0-build2-unsigned-ipa
+          path: RavanGo-1.0-build2-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14
