@@ -9,6 +9,10 @@ enum AppLanguage: String, CaseIterable, Codable, Identifiable, Equatable, Sendab
     var locale: Locale { Locale(identifier: rawValue) }
     var layoutDirection: LayoutDirection { self == .persian ? .rightToLeft : .leftToRight }
     var label: LocalizedStringKey { self == .persian ? "Persian" : "English" }
+
+    init(locale: Locale) {
+        self = locale.identifier.lowercased().hasPrefix("fa") ? .persian : .english
+    }
 }
 
 enum AppAppearance: String, CaseIterable, Codable, Identifiable, Equatable {
@@ -83,13 +87,15 @@ enum TeleprompterFont: String, CaseIterable, Codable, Identifiable, Equatable {
 enum TextAlignmentOption: String, CaseIterable, Codable, Identifiable, Equatable {
     case leading
     case center
+    case trailing
 
     var id: String { rawValue }
 
     var label: LocalizedStringKey {
         switch self {
-        case .leading: "Left"
+        case .leading: "Leading"
         case .center: "Center"
+        case .trailing: "Trailing"
         }
     }
 
@@ -97,6 +103,15 @@ enum TextAlignmentOption: String, CaseIterable, Codable, Identifiable, Equatable
         switch self {
         case .leading: .leading
         case .center: .center
+        case .trailing: .trailing
+        }
+    }
+
+    var frameAlignment: Alignment {
+        switch self {
+        case .leading: .leading
+        case .center: .center
+        case .trailing: .trailing
         }
     }
 }
@@ -165,4 +180,43 @@ struct UserPreferences: Codable, Equatable, Sendable {
     var textAlignment: TextAlignmentOption = .leading
     var textColor: TextColorOption = .white
     var backgroundColor: BackgroundColorOption = .black
+
+    private enum CodingKeys: String, CodingKey {
+        case language
+        case defaultSpeed
+        case defaultFontSize
+        case defaultLineSpacing
+        case defaultMargins
+        case countdownDuration
+        case mirrorMode
+        case focusGuide
+        case focusGuidePosition
+        case wordsPerMinute
+        case appearance
+        case font
+        case textAlignment
+        case textColor
+        case backgroundColor
+    }
+
+    init() {}
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        language = try container.decodeIfPresent(AppLanguage.self, forKey: .language) ?? .english
+        defaultSpeed = try container.decodeIfPresent(Double.self, forKey: .defaultSpeed) ?? 1.0
+        defaultFontSize = try container.decodeIfPresent(Double.self, forKey: .defaultFontSize) ?? 44.0
+        defaultLineSpacing = try container.decodeIfPresent(Double.self, forKey: .defaultLineSpacing) ?? 12.0
+        defaultMargins = try container.decodeIfPresent(Double.self, forKey: .defaultMargins) ?? 28.0
+        countdownDuration = try container.decodeIfPresent(CountdownDuration.self, forKey: .countdownDuration) ?? .three
+        mirrorMode = try container.decodeIfPresent(Bool.self, forKey: .mirrorMode) ?? false
+        focusGuide = try container.decodeIfPresent(Bool.self, forKey: .focusGuide) ?? false
+        focusGuidePosition = try container.decodeIfPresent(Double.self, forKey: .focusGuidePosition) ?? 0.5
+        wordsPerMinute = try container.decodeIfPresent(Double.self, forKey: .wordsPerMinute) ?? 130.0
+        appearance = try container.decodeIfPresent(AppAppearance.self, forKey: .appearance) ?? .system
+        font = try container.decodeIfPresent(TeleprompterFont.self, forKey: .font) ?? .automatic
+        textAlignment = try container.decodeIfPresent(TextAlignmentOption.self, forKey: .textAlignment) ?? .leading
+        textColor = try container.decodeIfPresent(TextColorOption.self, forKey: .textColor) ?? .white
+        backgroundColor = try container.decodeIfPresent(BackgroundColorOption.self, forKey: .backgroundColor) ?? .black
+    }
 }

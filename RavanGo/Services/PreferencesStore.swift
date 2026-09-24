@@ -41,7 +41,7 @@ final class PreferencesStore: ObservableObject {
             defaults.set(data, forKey: AppConstants.preferencesKey)
             errorMessage = nil
         } catch {
-            errorMessage = String(localized: "RavanGo could not save your preferences.")
+            errorMessage = String(localized: "RavanGo could not save your preferences.", locale: values.language.locale)
             logger.error("Preference encoding failed: \(String(describing: error), privacy: .public)")
         }
     }

@@ -17,28 +17,30 @@ enum ScriptDirection: String, CaseIterable, Codable, Identifiable, Equatable, Se
         }
     }
 
-    func resolvedLayoutDirection(for text: String) -> LayoutDirection {
+    func resolvedLayoutDirection(for text: String, fallback: LayoutDirection = .leftToRight) -> LayoutDirection {
         switch self {
         case .leftToRight: .leftToRight
         case .rightToLeft: .rightToLeft
-        case .automatic: Self.detectedLayoutDirection(for: text)
+        case .automatic: Self.detectedLayoutDirection(for: text, fallback: fallback)
         }
     }
 
-    private static func detectedLayoutDirection(for text: String) -> LayoutDirection {
-        var leftToRightCount = 0
-        var rightToLeftCount = 0
+    private static func detectedLayoutDirection(for text: String, fallback: LayoutDirection) -> LayoutDirection {
         for scalar in text.unicodeScalars {
-            switch scalar.value {
-            case 0x0600...0x08FF, 0xFB50...0xFDFF, 0xFE70...0xFEFF:
-                rightToLeftCount += 1
-            case 0x0041...0x005A, 0x0061...0x007A, 0x00C0...0x02AF:
-                leftToRightCount += 1
+            let isRightToLeftRange = switch scalar.value {
+            case 0x0590...0x05FF, 0x0600...0x08FF, 0xFB1D...0xFDFF, 0xFE70...0xFEFF:
+                true
             default:
-                continue
+                false
+            }
+            if isRightToLeftRange && CharacterSet.letters.contains(scalar) {
+                return .rightToLeft
+            }
+            if CharacterSet.letters.contains(scalar) {
+                return .leftToRight
             }
         }
-        return rightToLeftCount > leftToRightCount ? .rightToLeft : .leftToRight
+        return fallback
     }
 }
 
@@ -72,8 +74,16 @@ final class Script: Identifiable {
         set { directionRawValue = newValue.rawValue }
     }
 
+    func resolvedTitleLayoutDirection(fallback: LayoutDirection) -> LayoutDirection {
+        direction.resolvedLayoutDirection(for: title, fallback: fallback)
+    }
+
+    func resolvedContentLayoutDirection(fallback: LayoutDirection) -> LayoutDirection {
+        direction.resolvedLayoutDirection(for: content, fallback: fallback)
+    }
+
     var resolvedLayoutDirection: LayoutDirection {
-        direction.resolvedLayoutDirection(for: content)
+        direction.resolvedLayoutDirection(for: content, fallback: .leftToRight)
     }
 
     var previewText: String {

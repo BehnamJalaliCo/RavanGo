@@ -2,34 +2,51 @@ import SwiftUI
 
 struct ScriptRowView: View {
     let script: Script
+    @Environment(\.layoutDirection) private var appLayoutDirection
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack(alignment: .firstTextBaseline) {
-                Text(script.title.isEmpty ? "Untitled Script" : script.title)
-                    .font(.headline)
+                titleView
                     .lineLimit(1)
                 Spacer(minLength: 8)
                 Text(script.updatedAt, format: .relative(presentation: .named))
-                    .font(.caption)
+                    .ravanGoFont(.caption)
                     .foregroundStyle(.secondary)
             }
-            if script.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                Text("No text yet")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(2)
-            } else {
-                Text(script.previewText)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(2)
-            }
+            contentView
         }
         .padding(.vertical, 4)
-        .environment(\.layoutDirection, script.resolvedLayoutDirection)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(script.title), \(script.previewText)")
+    }
+
+    @ViewBuilder
+    private var titleView: some View {
+        if script.title.isEmpty {
+            Text("Untitled Script")
+                .ravanGoFont(.headline, weight: .semibold)
+                .environment(\.layoutDirection, script.resolvedTitleLayoutDirection(fallback: appLayoutDirection))
+        } else {
+            Text(script.title)
+                .ravanGoFont(.headline, weight: .semibold)
+                .environment(\.layoutDirection, script.resolvedTitleLayoutDirection(fallback: appLayoutDirection))
+        }
+    }
+
+    @ViewBuilder
+    private var contentView: some View {
+        if script.content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            Text("No text yet")
+                .ravanGoFont(.subheadline)
+                .foregroundStyle(.secondary)
+                .lineLimit(2)
+        } else {
+            Text(script.previewText)
+                .ravanGoFont(.subheadline)
+                .foregroundStyle(.secondary)
+                .lineLimit(2)
+                .environment(\.layoutDirection, script.resolvedContentLayoutDirection(fallback: appLayoutDirection))
+        }
     }
 }
 

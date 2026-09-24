@@ -220,8 +220,8 @@ struct TeleprompterScrollView: UIViewRepresentable {
             if playing {
                 playing = false
                 stopDisplayLink()
-                onUserPause()
             }
+            onUserPause()
         }
 
         private func startDisplayLink() {

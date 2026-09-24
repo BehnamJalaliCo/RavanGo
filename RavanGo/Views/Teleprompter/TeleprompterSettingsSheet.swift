@@ -4,6 +4,7 @@ import SwiftUI
 struct TeleprompterSpeedSheet: View {
     @ObservedObject var viewModel: TeleprompterViewModel
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var preferences: PreferencesStore
 
     var body: some View {
         NavigationStack {
@@ -22,7 +23,7 @@ struct TeleprompterSpeedSheet: View {
                 Section("Fine adjustment") {
                     SliderSettingRow(
                         title: "Speed",
-                        valueLabel: String(format: "%.2fx", viewModel.speed),
+                        valueLabel: AppFormatting.speed(viewModel.speed, language: preferences.values.language),
                         value: $viewModel.speed,
                         range: 0.25...3.0,
                         step: 0.05
@@ -44,7 +45,9 @@ struct TeleprompterSpeedSheet: View {
     }
 
     private var closestPreset: SpeedPreset {
-        SpeedPreset.allCases.min { abs($0.multiplier - viewModel.speed) < abs($1.multiplier - viewModel.speed) } ?? .normal
+        SpeedPreset.allCases.min {
+            abs($0.multiplier - viewModel.speed) < abs($1.multiplier - viewModel.speed)
+        } ?? .normal
     }
 }
 
@@ -52,6 +55,7 @@ struct TeleprompterSpeedSheet: View {
 struct TeleprompterTextSettingsSheet: View {
     @ObservedObject var viewModel: TeleprompterViewModel
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var preferences: PreferencesStore
 
     var body: some View {
         NavigationStack {
@@ -59,21 +63,21 @@ struct TeleprompterTextSettingsSheet: View {
                 Section("Text") {
                     SliderSettingRow(
                         title: "Font size",
-                        valueLabel: "\(Int(viewModel.fontSize)) pt",
+                        valueLabel: AppFormatting.points(viewModel.fontSize, language: preferences.values.language),
                         value: $viewModel.fontSize,
                         range: 24...80,
                         step: 1
                     )
                     SliderSettingRow(
                         title: "Line spacing",
-                        valueLabel: "\(Int(viewModel.lineSpacing)) pt",
+                        valueLabel: AppFormatting.points(viewModel.lineSpacing, language: preferences.values.language),
                         value: $viewModel.lineSpacing,
                         range: 0...36,
                         step: 1
                     )
                     SliderSettingRow(
                         title: "Side margins",
-                        valueLabel: "\(Int(viewModel.margins)) pt",
+                        valueLabel: AppFormatting.points(viewModel.margins, language: preferences.values.language),
                         value: $viewModel.margins,
                         range: 12...72,
                         step: 1
@@ -113,7 +117,10 @@ struct TeleprompterTextSettingsSheet: View {
                     if viewModel.focusGuide {
                         SliderSettingRow(
                             title: "Vertical position",
-                            valueLabel: "\(Int(viewModel.focusGuidePosition * 100))%",
+                            valueLabel: AppFormatting.percentage(
+                                viewModel.focusGuidePosition,
+                                language: preferences.values.language
+                            ),
                             value: $viewModel.focusGuidePosition,
                             range: 0.3...0.7,
                             step: 0.05

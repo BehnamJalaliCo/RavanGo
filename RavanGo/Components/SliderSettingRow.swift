@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct SliderSettingRow<Value: BinaryFloatingPoint>: View where Value.Stride: BinaryFloatingPoint {
-    let title: String
+    let title: LocalizedStringKey
     let valueLabel: String
     @Binding var value: Value
     let range: ClosedRange<Value>

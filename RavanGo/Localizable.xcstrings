@@ -115,7 +115,19 @@
     "The backup does not contain any scripts." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "The backup does not contain any scripts." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "فایل پشتیبان متنی ندارد." } } } },
     "RavanGo could not create the export file." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not create the export file." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست فایل خروجی را بسازد." } } } },
     "RavanGo could not save the imported scripts." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save the imported scripts." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست متن‌های واردشده را ذخیره کند." } } } },
-    "Imported Script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Imported Script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن واردشده" } } } }
+    "Imported Script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Imported Script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "متن واردشده" } } } },
+    "Imported %lld scripts." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Imported %lld scripts." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "%lld متن وارد شد." } } } },
+    "Leading" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Leading" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "ابتدای خط" } } } },
+    "Trailing" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Trailing" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "انتهای خط" } } } },
+    "OK" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "OK" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تأیید" } } } },
+    "Something went wrong." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Something went wrong." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "مشکلی پیش آمد." } } } },
+    "RavanGo could not save these settings." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save these settings." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست این تنظیمات را ذخیره کند." } } } },
+    "RavanGo could not save this script. Your changes remain on screen." : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo could not save this script. Your changes remain on screen." } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "RavanGo نتوانست این متن را ذخیره کند. تغییرات شما روی صفحه باقی می‌ماند." } } } },
+    "Open the teleprompter for this script" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Open the teleprompter for this script" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "تله‌پرامپتر این متن را باز می‌کند" } } } },
+    "points_short" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "pt" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "نقطه" } } } },
+    "percent_sign" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "%" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "٪" } } } },
+    "wpm_short" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "wpm" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "کلمه در دقیقه" } } } },
+    "Countdown %lld" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Countdown %lld" } }, "fa" : { "stringUnit" : { "state" : "translated", "value" : "شمارش معکوس %lld" } } } }
   },
   "version" : "1.0"
 }

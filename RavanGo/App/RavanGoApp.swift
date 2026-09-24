@@ -50,6 +50,7 @@ private final class PersistenceController: ObservableObject {
 @MainActor
 private struct PersistenceBootstrapView: View {
     @ObservedObject var controller: PersistenceController
+    @EnvironmentObject private var preferences: PreferencesStore
 
     var body: some View {
         Group {
@@ -58,7 +59,9 @@ private struct PersistenceBootstrapView: View {
                     .modelContainer(container)
             } else {
                 PersistenceUnavailableView(
-                    message: controller.errorMessage ?? String(localized: "RavanGo is preparing its local script library."),
+                    message: controller.errorMessage == nil
+                        ? String(localized: "RavanGo is preparing its local script library.", locale: preferences.values.language.locale)
+                        : String(localized: "RavanGo could not open its local script library. Please try again.", locale: preferences.values.language.locale),
                     retry: controller.retry
                 )
             }

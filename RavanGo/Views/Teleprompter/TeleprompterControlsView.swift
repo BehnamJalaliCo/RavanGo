@@ -3,6 +3,7 @@ import SwiftUI
 @MainActor
 struct TeleprompterControlsView: View {
     @ObservedObject var viewModel: TeleprompterViewModel
+    @Environment(\.layoutDirection) private var appLayoutDirection
     let onClose: () -> Void
     let onSpeed: () -> Void
     let onText: () -> Void
@@ -17,9 +18,7 @@ struct TeleprompterControlsView: View {
                 .accessibilityLabel("Close teleprompter")
                 Image(systemName: "text.book.closed")
                     .foregroundStyle(.secondary)
-                Text(viewModel.script.title.isEmpty ? "Untitled Script" : viewModel.script.title)
-                    .font(.headline)
-                    .lineLimit(1)
+                titleView
                 Spacer()
                 Button {
                     viewModel.toggleLock()
@@ -27,7 +26,7 @@ struct TeleprompterControlsView: View {
                     Image(systemName: viewModel.isLocked ? "lock.fill" : "lock.open")
                         .frame(width: 44, height: 44)
                 }
-                .accessibilityLabel(viewModel.isLocked ? "Unlock controls" : "Lock controls")
+                .accessibilityLabel(lockAccessibilityLabel)
             }
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
@@ -38,7 +37,7 @@ struct TeleprompterControlsView: View {
                 controlButton("arrow.counterclockwise", title: "Restart") {
                     viewModel.restart()
                 }
-                controlButton(viewModel.isPlaying ? "pause.fill" : "play.fill", title: viewModel.isPlaying ? "Pause" : "Play") {
+                controlButton(viewModel.isPlaying ? "pause.fill" : "play.fill", title: playbackTitle) {
                     viewModel.togglePlayback()
                 }
                 controlButton("speedometer", title: "Speed") {
@@ -49,7 +48,12 @@ struct TeleprompterControlsView: View {
                     onText()
                 }
                 .disabled(viewModel.isLocked)
-                controlButton(viewModel.mirrorMode ? "rectangle.lefthalf.inset.filled.arrow.left" : "rectangle.lefthalf.inset.filled.arrow.right", title: "Mirror") {
+                controlButton(
+                    viewModel.mirrorMode
+                        ? "rectangle.lefthalf.inset.filled.arrow.left"
+                        : "rectangle.lefthalf.inset.filled.arrow.right",
+                    title: "Mirror"
+                ) {
                     guard !viewModel.isLocked else { return }
                     viewModel.mirrorMode.toggle()
                     viewModel.persistCurrentSettings()
@@ -73,17 +77,44 @@ struct TeleprompterControlsView: View {
         .accessibilityElement(children: .contain)
     }
 
-    private func controlButton(_ systemImage: String, title: String, action: @escaping () -> Void) -> some View {
+    private func controlButton(
+        _ systemImage: String,
+        title: LocalizedStringKey,
+        action: @escaping () -> Void
+    ) -> some View {
         Button(action: action) {
             VStack(spacing: 5) {
                 Image(systemName: systemImage)
-                    .font(.headline)
+                    .ravanGoFont(.headline)
                     .frame(width: 44, height: 32)
                 Text(title)
-                    .font(.caption2)
+                    .ravanGoFont(.caption2)
             }
             .frame(minWidth: 48)
         }
         .accessibilityLabel(title)
+    }
+
+    private var playbackTitle: LocalizedStringKey {
+        viewModel.isPlaying ? "Pause" : "Play"
+    }
+
+    private var lockAccessibilityLabel: LocalizedStringKey {
+        viewModel.isLocked ? "Unlock controls" : "Lock controls"
+    }
+
+    @ViewBuilder
+    private var titleView: some View {
+        if viewModel.script.title.isEmpty {
+            Text("Untitled Script")
+                .ravanGoFont(.headline, weight: .semibold)
+                .lineLimit(1)
+                .environment(\.layoutDirection, viewModel.script.resolvedTitleLayoutDirection(fallback: appLayoutDirection))
+        } else {
+            Text(viewModel.script.title)
+                .ravanGoFont(.headline, weight: .semibold)
+                .lineLimit(1)
+                .environment(\.layoutDirection, viewModel.script.resolvedTitleLayoutDirection(fallback: appLayoutDirection))
+        }
     }
 }

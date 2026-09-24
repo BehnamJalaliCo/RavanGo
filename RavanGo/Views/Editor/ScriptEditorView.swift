@@ -7,6 +7,7 @@ struct ScriptEditorView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var preferences: PreferencesStore
+    @Environment(\.layoutDirection) private var appLayoutDirection
     @Bindable var script: Script
 
     @FocusState private var editorFocused: Bool
@@ -19,22 +20,28 @@ struct ScriptEditorView: View {
         Form {
             Section {
                 TextField("Script title", text: $script.title)
-                    .font(.title3.weight(.semibold))
+                    .ravanGoFont(.title3, weight: .semibold)
                     .textInputAutocapitalization(.sentences)
                     .accessibilityLabel("Script title")
-                    .environment(\.layoutDirection, script.resolvedLayoutDirection)
+                    .environment(\.layoutDirection, script.resolvedTitleLayoutDirection(fallback: appLayoutDirection))
 
                 TextEditor(text: $script.content)
                     .focused($editorFocused)
                     .frame(minHeight: 300)
-                    .font(.body)
+                    .ravanGoFont(.body)
                     .textInputAutocapitalization(.sentences)
                     .accessibilityLabel("Script text")
-                    .environment(\.layoutDirection, script.resolvedLayoutDirection)
+                    .environment(\.layoutDirection, script.resolvedContentLayoutDirection(fallback: appLayoutDirection))
             }
 
             Section {
-                LabeledContent("Words", value: "\(ScriptMetrics.wordCount(in: script.content))")
+                LabeledContent(
+                    "Words",
+                    value: AppFormatting.integer(
+                        Double(ScriptMetrics.wordCount(in: script.content)),
+                        locale: preferences.values.language.locale
+                    )
+                )
                 LabeledContent(
                     "Estimated time",
                     value: ScriptMetrics.formattedDuration(
@@ -61,14 +68,14 @@ struct ScriptEditorView: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .frame(maxWidth: .infinity, alignment: .center)
-                .accessibilityHint("Opens the teleprompter for this script")
+                .accessibilityHint("Open the teleprompter for this script")
 
                 Button("Clear Text", role: .destructive) {
                     showingClearConfirmation = true
                 }
             }
         }
-        .navigationTitle(script.title.isEmpty ? "Untitled Script" : script.title)
+        .navigationTitle(editorTitle)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
@@ -105,7 +112,7 @@ struct ScriptEditorView: View {
         )) {
             Button("OK", role: .cancel) {}
         } message: {
-            Text(autosave.errorMessage ?? "RavanGo could not save this script.")
+            Text(autosave.errorMessage ?? "RavanGo could not save this script. Your changes remain on screen.")
         }
         .onChange(of: script.title) { _, _ in
             script.updatedAt = .now
@@ -128,13 +135,19 @@ struct ScriptEditorView: View {
             try ScriptStorageService.save(modelContext)
             return true
         } catch {
-            autosave.errorMessage = String(localized: "RavanGo could not save this script. Your last saved version was restored.")
+            autosave.errorMessage = String(localized: "RavanGo could not save this script. Your changes remain on screen.", locale: preferences.values.language.locale)
             return false
         }
     }
 
     private func scheduleSave() {
-        autosave.schedule(context: modelContext)
+        autosave.schedule(context: modelContext, language: preferences.values.language)
+    }
+
+    private var editorTitle: String {
+        script.title.isEmpty
+            ? String(localized: "Untitled Script", locale: preferences.values.language.locale)
+            : script.title
     }
 }
 
@@ -144,7 +157,7 @@ private final class ScriptAutosaveCoordinator: ObservableObject {
 
     private var task: Task<Void, Never>?
 
-    func schedule(context: ModelContext) {
+    func schedule(context: ModelContext, language: AppLanguage) {
         task?.cancel()
         task = Task { @MainActor [weak self] in
             do {
@@ -156,7 +169,7 @@ private final class ScriptAutosaveCoordinator: ObservableObject {
             do {
                 try ScriptStorageService.save(context)
             } catch {
-                self?.errorMessage = String(localized: "RavanGo could not save this script. Your last saved version was restored.")
+                self?.errorMessage = String(localized: "RavanGo could not save this script. Your changes remain on screen.", locale: language.locale)
             }
         }
     }

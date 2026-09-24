@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct EmptyStateView: View {
-    let title: String
-    let message: String
-    let actionTitle: String
+    let title: LocalizedStringKey
+    let message: LocalizedStringKey
+    let actionTitle: LocalizedStringKey
     let action: () -> Void
 
     var body: some View {
